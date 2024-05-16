@@ -29,6 +29,29 @@ public class Game {
     parser = new Parser();
   }
 
+  private void initGameInfo(String fileName) throws Exception {
+    Path path = Path.of(fileName);
+    String jsonString = Files.readString(path);
+    JSONParser parser = new JSONParser();
+    JSONObject json = (JSONObject) parser.parse(jsonString);
+
+    JSONObject jsonInfo = (JSONObject) json.get("gameinfo");
+    JSONArray introMessage = (JSONArray) jsonInfo.get("intromessage");
+
+    GameInfo.introMessage = new String[introMessage.size()];
+    for (int i = 0; i < introMessage.size(); i++) {
+      GameInfo.introMessage[i] = (String)introMessage.get(i);
+    }
+  }
+
+  private void initItems(String fileName) throws Exception {
+    Path path = Path.of(fileName);
+    String jsonString = Files.readString(path);
+    JSONParser parser = new JSONParser();
+    JSONObject json = (JSONObject) parser.parse(jsonString);
+  
+  }
+
   private void initRooms(String fileName) throws Exception {
     Path path = Path.of(fileName);
     String jsonString = Files.readString(path);
