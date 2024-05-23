@@ -1,0 +1,16 @@
+{
+"items": [
+{
+    "id":"straw",
+    "name":"paper straw",
+    "description":"abc",
+    "room_id":"Hallway",
+    "weight":"5",
+    "isOpenable":"false"
+},
+{
+    "id":"chest",
+    "name":"a big chest"
+}
+]
+}
