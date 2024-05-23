@@ -1,72 +1,96 @@
 {
   "rooms": [
     {
-      "id": "Hallway",
-      "name": "Hallway",
-      "description": "You are in a long hallway. There are family pictures on all of the walls.",
+      "id": "Stairs",
+      "name": "Stairs",
+      "been": false,
+      "description": "You are at the top of the stairs",
       "exits": [
         {
           "isLocked": false,
-          "direction": "North",
+          "direction": "West",
           "adjacentRoom": "Bedroom"
         },
         {
-          "isLocked": true,
-          "direction": "East",
-          "adjacentRoom": "Bathroom",
-          "keyId": "1234"
+          "isLocked": false,
+          "direction": "Down",
+          "adjacentRoom": "Hallway"
         }
       ]
     },
     {
       "id": "Bedroom",
       "name": "Bedroom",
-      "description": "You are in a large bedroom",
+      "been": false,
+      "longDescription": "You are in a cozy bedroom that offers respite from the tumultuous sea outside. The room is compact, its walls adorned with weathered wood paneling. A simple bed with crisp white linens sits against one wall, accompanied by a small nightstand holding a dimly glowing lantern. Through the window, the beam of the lighthouse sweeps across the room at regular intervals, casting a soothing rhythm of light and shadow. Despite its modest size it acts as a haven amidst the wild expanse of the ocean. There are rooms to east and south of the bedroom",
+      "description": "You are in a your bedroom",
       "exits": [
         {
           "isLocked": false,
-          "direction": "South",
-          "adjacentRoom": "Hallway"
+          "direction": "East",
+          "adjacentRoom": "Stairs"
         },
         {
           "isLocked": false,
-          "direction": "SouthEast",
-          "adjacentRoom": "Bathroom"
+          "direction": "South",
+          "adjacentRoom": "Washroom"
+        }
+      ]
+    },
+    {
+      "id": "Washroom",
+      "name": "Washroom",
+      "been": false,
+      "longDescription": "You are in the washroom, it provides a modest yet functional space for its inhabitants. The room is compact, its walls adorned with whitewashed wooden panels weathered by the sea spray that permeates the air. A small window allows a sliver of natural light to filter in, offering glimpses of the restless waves crashing against the rocks below.",
+      "description": "You are in the washroom",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Bedroom"
+        }
+      ]
+    },
+    {
+      "id": "Hallway",
+      "name": "Hallway",
+      "been": false,
+      "longDescription": "You are walking through the hallway, it stretches forth, its walls adorned with weathered wood panels bearing the marks of salt-laden air and time's gentle erosion. A soft luminescence emanates from strategically placed lamps, casting a warm, inviting glow. The air is heavy with the scent of sea spray, while the rhythm of waves crashing against the rocky shore provides a backdrop to the slience and stillness in the air.",
+      "description": "You are in the hallway",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "Up",
+          "adjacentRoom": "Stairs"
+        },
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "Foyer"
         },
         {
           "isLocked": false,
           "direction": "East",
-          "adjacentRoom": "Closet"
-        }
-      ]
-    },
-    {
-      "id": "Bathroom",
-      "name": "Bathroom",
-      "description": "You are in a blue bathroom",
-      "exits": [
-        {
-          "isLocked": true,
-          "direction": "West",
-          "adjacentRoom": "Hallway",
-          "keyId": "1234"
+          "adjacentRoom": "Backdoor"
         },
         {
           "isLocked": false,
-          "direction": "NorthWest",
-          "adjacentRoom": "Bedroom"
+          "direction": "South",
+          "adjacentRoom": "Kitchen"
         }
       ]
     },
     {
-      "id": "Closet",
-      "name": "Closet",
-      "description": "You are in the closet. It is dark.",
+      "id": "Foyer",
+      "name": "Foyer",
+      "been": false,
+      "longDescription": "YOu are standing at the foyer floor it's weathered wooden planks line the floor from years of use, it's rustic appeal echoing the rugged coastline just beyond the threshold. Warm light dances upon the walls wooden panels , casting playful shadows that mimic the sway of seaweed in the tide. A single window by the door offers a glimpse of darkness lurking outside, while the worn rope rug underfoot adds steadyness to your feet. With the faint scent of salt lingering in the air.",
+      "description": "You are standing in the foyer",
       "exits": [
         {
           "isLocked": false,
-          "direction": "West",
-          "adjacentRoom": "Bedroom"
+          "direction": "East",
+          "adjacentRoom": "Hallway"
         }
       ]
     }
