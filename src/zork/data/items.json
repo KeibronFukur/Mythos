@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 "items": [
 {
     "id":"straw",
@@ -13,4 +14,36 @@
     "name":"a big chest"
 }
 ]
+=======
+    "items":[
+        {
+            "id":"straw",
+            "name":"paper straw",
+            "description":"a paper straw that will likely get soggy as soon as it enters a liquid",
+            "room_id":"Hallway",
+            "weight":"5",
+            "isOpenable":"false"
+        },
+        {
+            "id":"Chest",
+            "name":"A Big Chest",
+            "description":"A nice big chest",
+            "room_id":"Bedroom",
+            "weight":"10000",
+            "isOpenable":"true",
+            "isLockable":"false"
+        },
+        {
+            "id":"straw2",
+            "name":"big paper straw",
+            "description":"a paper straw that will likely get soggy as soon as it enters a liquid",
+            "item_id":"Chest",
+            "weight":"6",
+            "isOpenable":"false"
+        },
+        {
+
+        }
+    ]
+>>>>>>> 23bfd8e9367427d23575e4343493b685c6cf7333
 }
