@@ -1,32 +1,36 @@
 {
     "items":[
         {
-            "id":"straw",
-            "name":"paper straw",
-            "description":"a paper straw that will likely get soggy as soon as it enters a liquid",
-            "room_id":"Hallway",
+            "id":"steak knife",
+            "name":"steak knife",
+            "description":"You picked up a steak knife, great for cutting, sicing, even in combat.",
+            "room_id":"Dining Hall",
             "weight":"5",
             "isOpenable":"false"
         },
         {
-            "id":"Chest",
-            "name":"A Big Chest",
-            "description":"A nice big chest",
-            "room_id":"Bedroom",
-            "weight":"10000",
-            "isOpenable":"true",
-            "isLockable":"false"
-        },
-        {
-            "id":"straw2",
-            "name":"big paper straw",
-            "description":"a paper straw that will likely get soggy as soon as it enters a liquid",
-            "item_id":"Chest",
-            "weight":"6",
+            "id":"kitchen knife",
+            "name":"kitchen knife",
+            "description":"You picked up a kitchen knife, not so sharp but good for cutting up food!",
+            "room_id":"Kitchen",
+            "weight":"2",
             "isOpenable":"false"
         },
         {
-
+            "id":"old knife",
+            "name":"old knife",
+            "description":"You picked up an old, ritual knife. This one is different than other knife. It's sharper than one can see.",
+            "room_id":"Flooded Area",
+            "weight":"4",
+            "isOpenable":"false"
+        },
+        {
+            "id":"jacket",
+            "name":"jacket",
+            "description":"You grabbed the jacket. Good to keep you cozy and looking nice.",
+            "room_id":"Foyer",
+            "weight":"15",
+            "isOpenable":"false"
         }
     ]
 }
