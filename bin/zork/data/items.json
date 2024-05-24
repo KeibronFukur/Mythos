@@ -1,20 +1,4 @@
 {
-<<<<<<< HEAD
-"items": [
-{
-    "id":"straw",
-    "name":"paper straw",
-    "description":"abc",
-    "room_id":"Hallway",
-    "weight":"5",
-    "isOpenable":"false"
-},
-{
-    "id":"chest",
-    "name":"a big chest"
-}
-]
-=======
     "items":[
         {
             "id":"straw",
@@ -45,5 +29,4 @@
 
         }
     ]
->>>>>>> 23bfd8e9367427d23575e4343493b685c6cf7333
 }

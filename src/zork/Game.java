@@ -30,17 +30,11 @@ public class Game {
     parser = new Parser();
   }
 
-<<<<<<< HEAD
-  private void initItems(String fileName) throws Exception{
-=======
   private void initGameInfo(String fileName) throws Exception {
->>>>>>> 23bfd8e9367427d23575e4343493b685c6cf7333
     Path path = Path.of(fileName);
     String jsonString = Files.readString(path);
     JSONParser parser = new JSONParser();
     JSONObject json = (JSONObject) parser.parse(jsonString);
-<<<<<<< HEAD
-=======
 
     JSONObject jsonInfo = (JSONObject) json.get("gameinfo");
     JSONArray introMessage = (JSONArray) jsonInfo.get("intromessage");
@@ -57,7 +51,6 @@ public class Game {
     JSONParser parser = new JSONParser();
     JSONObject json = (JSONObject) parser.parse(jsonString);
   
->>>>>>> 23bfd8e9367427d23575e4343493b685c6cf7333
   }
 
   private void initRooms(String fileName) throws Exception {
