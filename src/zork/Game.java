@@ -23,6 +23,7 @@ public class Game {
   public Game() {
     try {
       initRooms("src\\zork\\data\\rooms.json");
+      initItems("src\\zork\\data\\rooms.json");
       currentRoom = roomMap.get("Bedroom");
       inventory = new Inventory(12);
     } catch (Exception e) {
@@ -51,7 +52,34 @@ public class Game {
     String jsonString = Files.readString(path);
     JSONParser parser = new JSONParser();
     JSONObject json = (JSONObject) parser.parse(jsonString);
-  
+
+    JSONArray jsonRooms = (JSONArray) json.get("rooms");
+
+    for (Object roomObj : jsonRooms) {
+      Room room = new Room();
+      String roomName = (String) ((JSONObject) roomObj).get("name");
+      String roomId = (String) ((JSONObject) roomObj).get("id");
+      String roomDescription = (String) ((JSONObject) roomObj).get("description");
+      String roomLongDescription = (String) ((JSONObject) roomObj).get("longDescription");
+      Boolean roomBeen = (Boolean)((JSONObject) roomObj).get("been");
+      room.setDescription(roomDescription);
+      room.setLongDescription(roomLongDescription);
+      room.setRoomName(roomName);
+
+      JSONArray jsonExits = (JSONArray) ((JSONObject) roomObj).get("exits");
+      ArrayList<Exit> exits = new ArrayList<Exit>();
+      for (Object exitObj : jsonExits) {
+        String direction = (String) ((JSONObject) exitObj).get("direction");
+        String adjacentRoom = (String) ((JSONObject) exitObj).get("adjacentRoom");
+        String keyId = (String) ((JSONObject) exitObj).get("keyId");
+        Boolean isLocked = (Boolean) ((JSONObject) exitObj).get("isLocked");
+        Boolean isOpen = (Boolean) ((JSONObject) exitObj).get("isOpen");
+        Exit exit = new Exit(direction, adjacentRoom, isLocked, keyId, isOpen);
+        exits.add(exit);
+      }
+      room.setExits(exits);
+      roomMap.put(roomId, room);
+    }
   }
 
   private void initRooms(String fileName) throws Exception {
@@ -146,8 +174,11 @@ public class Game {
     } else if (commandWord.equals("look")) {
       System.out.println(currentRoom.longDescription());
       //picks up an item from the room array
-    } else if (commandWord.equals("pick up")){
-        
+    } else if (commandWord.equals("take")){
+        takeItem(command);
+    }
+    else if (commandWord.equals("drop")){
+      dropItem(command);
     }
     return false;
   }
@@ -178,6 +209,7 @@ public class Game {
     }
 
     String direction = command.getSecondWord();
+    
 
     // Try to leave current room.
     Room nextRoom = currentRoom.nextRoom(direction);
@@ -198,4 +230,48 @@ public class Game {
       }
     }
   }
+
+  private void takeItem(Command command){
+    if (!command.hasSecondWord()) {
+     // if there is no second word, we don't know where to go...
+     System.out.println("Take what?");
+     return;
+    }
+
+    String itemName = command.getSecondWord();
+
+    Item item = currentRoom.getInventory().removeItem(itemName);
+
+    if (item != null){
+      if (inventory.addItem(item)){
+        System.out.println("You took the " + itemName);
+      }else{
+        System.out.println("The " + itemName + " was too heavy to take.");
+      }
+    }else{
+      System.out.println("Are you seeing something I don't...");
+    }
+
+  }
+
+  private void dropItem(Command command){
+    if (!command.hasSecondWord()) {
+     // if there is no second word, we don't know where to go...
+     System.out.println("Drop what?");
+     return;
+    }
+
+    String itemName = command.getSecondWord();
+
+    Item item = currentRoom.getInventory().removeItem(itemName);
+
+    if (item != null){
+      if (inventory.addItem(item)){
+        System.out.println("You droped the " + itemName + " into " + currentRoom);
+    }else{
+      System.out.println("Are you holding something I don't see...");
+    }
+
+  }
+ }
 }

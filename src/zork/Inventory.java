@@ -31,10 +31,14 @@ public class Inventory {
   }
 
   public Item removeItem(String itemName){  
-    int itemLoc = items.indexOf(itemName);
 
-   //return roomItems.add(itemName);
-    return items.remove(itemLoc);
+    for(int i = 0; i< items.size();i++){
+      if (items.get(i).getName().equals(itemName)){
+        Item item = items.remove(i);
+        return item;
+      }
+    }
+    return null;
   }
 
 }

@@ -42,6 +42,8 @@ public class Room {
     description = "DEFAULT DESCRIPTION";
     longDescription = "DEFAULT DESCRIPTION?";
     exits = new ArrayList<Exit>();
+    inventory = new Inventory(Integer.MAX_VALUE);
+
   }
 
   public void addExit(Exit exit) throws Exception {
@@ -138,6 +140,9 @@ public class Room {
   public void setBeen(boolean been){
     this.been = been;
   }
+
+  
+  
 
   public boolean isBeen()
   {

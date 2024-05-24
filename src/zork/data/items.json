@@ -2,7 +2,7 @@
     "items":[
         {
             "id":"dimLantern",
-            "name":"dimLantern",
+            "name":"lantern",
             "description":"",
             "room_id":"Bedroom",
             "weight":"5",
