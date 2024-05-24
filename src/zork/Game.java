@@ -15,6 +15,7 @@ public class Game {
 
   private Parser parser;
   private Room currentRoom;
+  private Inventory inventory;
 
   /**
    * Create the game and initialise its internal map.
@@ -23,6 +24,7 @@ public class Game {
     try {
       initRooms("src\\zork\\data\\rooms.json");
       currentRoom = roomMap.get("Bedroom");
+      inventory = new Inventory(12);
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -104,7 +106,7 @@ public class Game {
       }
 
     }
-    System.out.println("Thank you for playing.  Good bye.");
+    System.out.println("Thank you for playing my game, Hope you had fun. Bye bye.");
   }
 
   /**
@@ -141,6 +143,11 @@ public class Game {
         return true; // signal that we want to quit
     } else if (commandWord.equals("eat")) {
       System.out.println("Do you really think you should be eating at a time like this?");
+    } else if (commandWord.equals("look")) {
+      System.out.println(currentRoom.longDescription());
+      //picks up an item from the room array
+    } else if (commandWord.equals("pick up")){
+        
     }
     return false;
   }
@@ -180,7 +187,7 @@ public class Game {
     else 
     {
       currentRoom = nextRoom;
-      
+
       // see if you have been in the room already
       if (nextRoom.isBeen() ) {
         System.out.println(currentRoom.shortDescription());

@@ -1,7 +1,7 @@
 {
     "items":[
         {
-            "id":"straw",
+            "id":"lantern",
             "name":"paper straw",
             "description":"a paper straw that will likely get soggy as soon as it enters a liquid",
             "room_id":"Hallway",

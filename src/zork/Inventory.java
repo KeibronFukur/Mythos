@@ -30,4 +30,11 @@ public class Inventory {
     }
   }
 
+  public Item removeItem(String itemName){  
+    int itemLoc = items.indexOf(itemName);
+
+   //return roomItems.add(itemName);
+    return items.remove(itemLoc);
+  }
+
 }
