@@ -22,7 +22,11 @@ public class Game {
   public Game() {
     try {
       initRooms("src\\zork\\data\\rooms.json");
+<<<<<<< HEAD
     //  initItems("src\\zork\\data\\items.json");
+=======
+      initItems("src\\zork\\data\\rooms.json");
+>>>>>>> 045f81c4060f236f97a0a33125cf87d50138e3f1
       currentRoom = roomMap.get("Bedroom");
     } catch (Exception e) {
       e.printStackTrace();
@@ -34,6 +38,29 @@ public class Game {
     String jsonString = Files.readString(path);
     JSONParser parser = new JSONParser();
     JSONObject json = (JSONObject) parser.parse(jsonString);
+  }
+
+  private void initGameInfo(String fileName) throws Exception {
+    Path path = Path.of(fileName);
+    String jsonString = Files.readString(path);
+    JSONParser parser = new JSONParser();
+    JSONObject json = (JSONObject) parser.parse(jsonString);
+
+    JSONObject jsonInfo = (JSONObject) json.get("gameinfo");
+    JSONArray introMessage = (JSONArray) jsonInfo.get("intromessage");
+
+    GameInfo.introMessage = new String[introMessage.size()];
+    for (int i = 0; i < introMessage.size(); i++) {
+      GameInfo.introMessage[i] = (String)introMessage.get(i);
+    }
+  }
+
+  private void initItems(String fileName) throws Exception {
+    Path path = Path.of(fileName);
+    String jsonString = Files.readString(path);
+    JSONParser parser = new JSONParser();
+    JSONObject json = (JSONObject) parser.parse(jsonString);
+  
   }
 
   private void initRooms(String fileName) throws Exception {
@@ -49,7 +76,10 @@ public class Game {
       String roomName = (String) ((JSONObject) roomObj).get("name");
       String roomId = (String) ((JSONObject) roomObj).get("id");
       String roomDescription = (String) ((JSONObject) roomObj).get("description");
+      String roomLongDescription = (String) ((JSONObject) roomObj).get("longDescription");
+      Boolean roomBeen = (Boolean)((JSONObject) roomObj).get("been");
       room.setDescription(roomDescription);
+      room.setLongDescription(roomLongDescription);
       room.setRoomName(roomName);
 
       JSONArray jsonExits = (JSONArray) ((JSONObject) roomObj).get("exits");
@@ -133,8 +163,8 @@ public class Game {
    * and a list of the command words.
    */
   private void printHelp() {
-    System.out.println("You are lost. You are alone. You wander");
-    System.out.println("around at Monash Uni, Peninsula Campus.");
+    System.out.println("You are alone on an island, a storm cuts you off from main land. You have never seen a storm like this before its almost super natural");
+    System.out.println("You find that strang things are happening, such as things lurking just around the cornner of your eyes.");
     System.out.println();
     System.out.println("Your command words are:");
     parser.showCommands();
@@ -157,10 +187,19 @@ public class Game {
     Room nextRoom = currentRoom.nextRoom(direction);
 
     if (nextRoom == null)
-      System.out.println("There is no door!");
-    else {
+      System.out.println("There is no room that way, dummkopf!");
+    else 
+    {
       currentRoom = nextRoom;
-      System.out.println(currentRoom.longDescription());
+      
+      // see if you have been in the room already
+      if (nextRoom.isBeen() ) {
+        System.out.println(currentRoom.shortDescription());
+      }
+      else {
+        nextRoom.setBeen(true);
+        System.out.println(currentRoom.longDescription());
+      }
     }
   }
 }

@@ -5,7 +5,9 @@ import java.util.ArrayList;
 public class Room {
 
   private String roomName;
+  private String longDescription;
   private String description;
+  private boolean been;
   private ArrayList<Exit> exits;
 
   public ArrayList<Exit> getExits() {
@@ -20,14 +22,18 @@ public class Room {
    * Create a room described "description". Initially, it has no exits.
    * "description" is something like "a kitchen" or "an open court yard".
    */
-  public Room(String description) {
+  public Room(String description, String longDescription, boolean been) {
     this.description = description;
+    this.longDescription = longDescription;
+    this.been = been;
+   // this.longDescription = longDescription;
     exits = new ArrayList<Exit>();
   }
 
   public Room() {
     roomName = "DEFAULT ROOM";
     description = "DEFAULT DESCRIPTION";
+    longDescription = "DEFAULT DESCRIPTION?";
     exits = new ArrayList<Exit>();
   }
 
@@ -49,7 +55,7 @@ public class Room {
    */
   public String longDescription() {
 
-    return "Room: " + roomName + "\n\n" + description + "\n" + exitString();
+    return "Room: " + roomName + "\n\n" + longDescription + "\n" + exitString();
   }
 
   /**
@@ -110,5 +116,24 @@ public class Room {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  //sets and gets the long description
+  public void setLongDescription(String longDescription) {
+    this.longDescription = longDescription;
+  }
+
+  public String getLongDescription() {
+    return longDescription;
+  }
+
+  //sets and gets been
+  public void setBeen(boolean been){
+    this.been = been;
+  }
+
+  public boolean isBeen()
+  {
+    return been;
   }
 }
