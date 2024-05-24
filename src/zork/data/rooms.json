@@ -4,7 +4,7 @@
       "id": "Stairs",
       "name": "Stairs",
       "been": false,
-      "description": "You are at the top of the stairs",
+      "description": "You are at the top of the stairs, and the world downstairs awaits you!",
       "exits": [
         {
           "isLocked": false,
@@ -60,7 +60,7 @@
       "exits": [
         {
           "isLocked": false,
-          "direction": "Up",
+          "direction": "North",
           "adjacentRoom": "Stairs"
         },
         {
