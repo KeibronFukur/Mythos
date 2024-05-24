@@ -61,7 +61,7 @@
       "exits": [
         {
           "isLocked": false,
-          "direction": "Up",
+          "direction": "North",
           "adjacentRoom": "Stairs"
         },
         {
@@ -92,6 +92,65 @@
           "isLocked": false,
           "direction": "East",
           "adjacentRoom": "Hallway"
+        }
+      ]
+    },
+    {
+      "id": "Kitchen",
+      "name": "Kitchen",
+      "been": false,
+      "longDescription": "You're in the cozy kitchen of the lighthouse, bathed in the soft glow of flickering candlelight. Polished silverware gleams on the rustic wooden countertops, reflecting the warmth of the room. The scent of freshly baked bread mingles with the salty tang of the sea breeze drifting in through the open window. A cast iron stove radiates heat, casting shadows on the whitewashed walls adorned with nautical decor. In one corner, a sturdy oak table invites you to sit and enjoy a hearty meal while gazing out at the endless expanse of ocean beyond.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Hallway"
+        },
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "Dining Hall"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "Cellar"
+        }
+      ]
+    },
+    {
+      "id": "Back Foyer",
+      "name": "Back Foyer",
+      "been": false,
+      "longDescription": "You're in the back foyer of the quaint lighthouse. Soft light filters in through the windows, casting a warm glow on the weathered wooden walls. The air is tinged with salt and sea breeze, carrying echoes of the ocean's song. A sturdy door leads out to the rocky cliffside, while maritime relics and old photographs adorn the space, telling stories of the lighthouse keeper's past. A faded rug covers the worn floorboards, hinting at hidden compartments or forgotten treasures waiting to be discovered.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "Hallway"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "Dining Hall"
+        }
+      ]
+    },
+    {
+      "id": "Dining Hall",
+      "name": "Dining Hall",
+      "been": false,
+      "longDescription": "You're in the spacious dining hall of the lighthouse. A long, polished mahogany table sits at the center, adorned with gleaming silverware. Through tall windows, you can see the rugged coastline and crashing waves. Maritime-themed tapestries line the walls, adding a touch of seafaring charm to the room. It's a perfect setting for enjoying a meal while taking in the breathtaking views of the sea.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "Kitchen"
+        },
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Back Foyer"
         }
       ]
     }

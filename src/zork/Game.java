@@ -23,7 +23,7 @@ public class Game {
   public Game() {
     try {
       initRooms("src\\zork\\data\\rooms.json");
-      initItems("src\\zork\\data\\rooms.json");
+    //  initItems("src\\zork\\data\\items.json");
       currentRoom = roomMap.get("Bedroom");
       inventory = new Inventory(12);
     } catch (Exception e) {
