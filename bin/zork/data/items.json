@@ -30,7 +30,7 @@
             "description":"You grabbed the jacket. Good to keep you cozy and looking nice.",
             "room_id":"Foyer",
             "weight":"15",
-            "isOpenable":"false"
+            "isOpenable":"true"
         }
     ]
 }
