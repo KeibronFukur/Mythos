@@ -1,15 +1,22 @@
 package zork;
 
-// write code for encountering an enemy
+// write code for encountering an enemy 
 public class CombatSystem {
 
+    
+public int PlayerHealth = 0; 
     private int x = 0;
-    private static final String[] validCommands = { "Attack", "Parry", "Grab","DarkSoulsRoll" };
+    private int y = (int) (Math.random() * 100);
+    private int EnemyHealth
+    private static final String[] validCommands = { "Attack", "Parry","DarkSoulsRoll" };
 
-    public CombatSystem() {
+    /**
+     * 
+     */
+    public void CombatSystem() {
         
+    
     }
-
     public boolean isCommand(String aString) {
         for (String c : validCommands) {
             if (c.equals(aString)) {
@@ -28,24 +35,35 @@ public class CombatSystem {
                 System.out.println("Open your eyes");
                 System.out.println("You missed");
             }
+            if (x == 1){
+                EnemyHealth =- Item.getDPSvalue();
+
+            }
             
         } 
         
-        else if (aString.equals("Parry")) {
+        if (aString.equals("Parry") &&  Monster.getAttack() = 1) {
             x = 2;
             System.out.println("You parried");
-        } else if (aString.equals("Grab")) {
-            x = 3;
-            System.out.println("You grabbed");
+            if (aString.equals("Parry") && Monster.getAttack() = 2){
+               PlayerHealth =- Monster.getAttackValue();
+            }
+            else {
+                System.out.println("Stop Mashing");
+            }
+        } 
         if(aString.equals("DarkSoulsRoll")){
-            x = 4;
-            System.out.println("Dark Souls");
-            x = 4;
+            x = 3;
+            System.out.println("Dark Souls Roll");
+            
 
         }
-        } else {
+         else {
             System.out.println("Invalid command try again idiot");
+
         }
+        
+        
     }
 
     public void showAll() {
@@ -60,11 +78,12 @@ public class CombatSystem {
         combatSystem.showAll();
         combatSystem.Combat("Attack");
         combatSystem.Combat("Grab");
-        combatSystem.Combat("Parry");
+        combatSystem.Combat("DarkSoulsRoll");
+        
         }
+    }
 
-}
-
+    
 
 
 
@@ -78,10 +97,4 @@ public class CombatSystem {
 //}
 //if (EA = 1 && x = 3){
 //int PH = 1; 
-//
-//
-//
-//}
-//
-//
-//
+

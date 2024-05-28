@@ -47,4 +47,9 @@ public class Item extends OpenableObject {
     this.isOpenable = isOpenable;
   }
 
+public static int getDPSvalue() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getDPSvalue'");
+}
+
 }
