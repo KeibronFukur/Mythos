@@ -1,32 +1,45 @@
 {
     "items":[
         {
-            "id":"straw",
-            "name":"paper straw",
-            "description":"a paper straw that will likely get soggy as soon as it enters a liquid",
+            "id":"dimLantern",
+            "name":"lantern",
+            "description":"",
+            "room_id":"Bedroom",
+            "weight":"5",
+            "isOpenable":"false"
+        },
+        {
+            "id":"lantern",
+            "name":"lantern",
+            "description":"",
             "room_id":"Hallway",
             "weight":"5",
             "isOpenable":"false"
         },
         {
-            "id":"Chest",
-            "name":"A Big Chest",
-            "description":"A nice big chest",
-            "room_id":"Bedroom",
-            "weight":"10000",
+            "id":"medicine",
+            "name":"medicine",
+            "description":"",
+            "room_id":"washroom",
+            "weight":"1",
             "isOpenable":"true",
             "isLockable":"false"
         },
         {
-            "id":"straw2",
-            "name":"big paper straw",
-            "description":"a paper straw that will likely get soggy as soon as it enters a liquid",
-            "item_id":"Chest",
-            "weight":"6",
+            "id":"razor",
+            "name":"razor",
+            "description":"",
+            "roomid":"washroom",
+            "weight":"1",
             "isOpenable":"false"
         },
         {
-
+            "id":"window",
+            "name":"window",
+            "description":"",
+            "roomid":"Stairs",
+            "weight":"15",
+            "isOpenable":"false"
         }
     ]
 }

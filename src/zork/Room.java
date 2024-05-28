@@ -9,6 +9,8 @@ public class Room {
   private String description;
   private boolean been;
   private ArrayList<Exit> exits;
+  //private ArrayList<Item> roomItems;
+  private Inventory inventory;
 
   public ArrayList<Exit> getExits() {
     return exits;
@@ -16,6 +18,10 @@ public class Room {
 
   public void setExits(ArrayList<Exit> exits) {
     this.exits = exits;
+  }
+
+  public Inventory getInventory(){
+    return inventory;
   }
 
   /**
@@ -28,6 +34,7 @@ public class Room {
     this.been = been;
    // this.longDescription = longDescription;
     exits = new ArrayList<Exit>();
+    inventory = new Inventory(Integer.MAX_VALUE);
   }
 
   public Room() {
@@ -35,6 +42,8 @@ public class Room {
     description = "DEFAULT DESCRIPTION";
     longDescription = "DEFAULT DESCRIPTION?";
     exits = new ArrayList<Exit>();
+    inventory = new Inventory(Integer.MAX_VALUE);
+
   }
 
   public void addExit(Exit exit) throws Exception {
@@ -131,6 +140,9 @@ public class Room {
   public void setBeen(boolean been){
     this.been = been;
   }
+
+  
+  
 
   public boolean isBeen()
   {
