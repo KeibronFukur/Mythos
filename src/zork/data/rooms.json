@@ -92,6 +92,12 @@
           "isLocked": false,
           "direction": "East",
           "adjacentRoom": "Hallway"
+        },
+        {
+          "isLocked": false,
+          "isOpen": false,
+          "direction": "West",
+          "adjacentRoom": "Front Yard"
         }
       ]
     },
@@ -113,6 +119,7 @@
         },
         {
           "isLocked": false,
+          "isOpen": false,
           "direction": "South",
           "adjacentRoom": "Cellar"
         }
@@ -151,6 +158,68 @@
           "isLocked": false,
           "direction": "North",
           "adjacentRoom": "Back Foyer"
+        }
+      ]
+    },
+    {
+      "id": "Front Yard",
+      "name": "Front Yard",
+      "been": false,
+      "longDescription": "You are in a serene front yard, where meticulously trimmed grass meets the edge of a quaint stone path. Potted flowers line the pathway leading to a cozy porch. A wooden bench offers a spot to pause and enjoy the tranquility. The air is alive with the gentle fragrance of blossoms, and the distant melody of chirping birds completes the scene.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Forest"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "Stairs"
+        }
+      ]
+    },
+    {
+      "id": "Forest",
+      "name": "Forest",
+      "been": false,
+      "longDescription": "You find yourself engulfed in a dark forest, where ancient trees loom overhead, their gnarled branches twisting like fingers clawing at the sky. The air is heavy with an earthy musk, and shadows dance ominously among the dense undergrowth. A thick canopy blocks out most of the sunlight, casting the forest floor into a perpetual twilight. The only sounds are the rustling of leaves and the occasional eerie hoot of an unseen owl.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "Stairs"
+        }
+      ]
+    },
+    {
+      "id": "Stairs",
+      "name": "Stairs",
+      "been": false,
+      "longDescription": "You cautiously descend the stairs, each step echoing softly in the dimly lit corridor below.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Front Yard"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "Dock"
+        }
+      ]
+    },
+    {
+      "id": "Dock",
+      "name": "Dock",
+      "been": false,
+      "longDescription": "The dock stretches out over calm waters, weathered wood worn smooth by the lapping waves. Seagulls call out overhead as fishing boats bob gently in the harbor, their ropes creaking in the salty breeze. The scent of saltwater mingles with the tang of fish, while the distant sound of seagulls adds to the tranquil atmosphere.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Stairs"
         }
       ]
     }
