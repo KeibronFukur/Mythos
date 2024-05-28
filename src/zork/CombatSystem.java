@@ -1,4 +1,5 @@
 package zork;
+
 // write code for encountering an enemy
 public class CombatSystem {
 
@@ -6,7 +7,7 @@ public class CombatSystem {
     private static final String[] validCommands = { "Attack", "Parry", "Grab","DarkSoulsRoll" };
 
     public CombatSystem() {
-        // Constructor
+        
     }
 
     public boolean isCommand(String aString) {
@@ -38,7 +39,7 @@ public class CombatSystem {
             System.out.println("You grabbed");
         if(aString.equals("DarkSoulsRoll")){
             x = 4;
-            System.out.println("Bro did a dark souls");
+            System.out.println("Dark Souls");
             x = 4;
 
         }
