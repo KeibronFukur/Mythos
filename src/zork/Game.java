@@ -23,41 +23,53 @@ public class Game {
     try {
       initRooms("src\\zork\\data\\rooms.json");
       initItems("src\\zork\\data\\rooms.json");
-      currentRoom = roomMap.get("Bedroom");
+      initMonsters("src\\zork\\data\\monsters.json");
+
+      currentRoom = roomMap.get("Hallway");
     } catch (Exception e) {
       e.printStackTrace();
     }
     parser = new Parser();
   }
 
-<<<<<<< HEAD
-  private void initItems(String fileName) throws Exception{
-=======
-  private void initGameInfo(String fileName) throws Exception {
->>>>>>> 23bfd8e9367427d23575e4343493b685c6cf7333
+  private void initMonsters(String fileName) throws Exception{
     Path path = Path.of(fileName);
     String jsonString = Files.readString(path);
     JSONParser parser = new JSONParser();
     JSONObject json = (JSONObject) parser.parse(jsonString);
-<<<<<<< HEAD
-=======
 
-    JSONObject jsonInfo = (JSONObject) json.get("gameinfo");
-    JSONArray introMessage = (JSONArray) jsonInfo.get("intromessage");
+    JSONArray jsonMonsters = (JSONArray) json.get("monsters");
 
-    GameInfo.introMessage = new String[introMessage.size()];
-    for (int i = 0; i < introMessage.size(); i++) {
-      GameInfo.introMessage[i] = (String)introMessage.get(i);
+    for (Object monsterObj : jsonMonsters) {
+      Monster monster = new Monster();
+      /*Boolean isHeavy = (Boolean)((JSONObject) monsterObj).get("isHeavy");*/
+      String roomId = (String) ((JSONObject) monsterObj).get("room_id");
+      String name = (String) ((JSONObject) monsterObj).get("name");
+      String monsterDescription = (String)((JSONObject) monsterObj).get("MonsterDescription");
+
+      /*monster.setHeavy(isHeavy);*/
+      monster.setName(name);
+      monster.setDescription(monsterDescription);
+
+      ArrayList<Attack> attacks = new ArrayList<Attack>();
+      JSONArray jsonAttacks = (JSONArray) ((JSONObject) monsterObj).get("attacks");
+      for (Object attackObj : jsonAttacks) {
+        String description = (String) ((JSONObject) attackObj).get("description");
+        int maxDamage = Integer.parseInt((String) ((JSONObject) attackObj).get("maxDamage"));
+
+        Attack attack = new Attack(description, maxDamage);
+        attacks.add(attack);
+      }
+      monster.setAttacks(attacks);
+      roomMap.get(roomId).addMonster(monster);;
     }
   }
 
-  private void initItems(String fileName) throws Exception {
+  private void initItems(String fileName) throws Exception{
     Path path = Path.of(fileName);
     String jsonString = Files.readString(path);
     JSONParser parser = new JSONParser();
     JSONObject json = (JSONObject) parser.parse(jsonString);
-  
->>>>>>> 23bfd8e9367427d23575e4343493b685c6cf7333
   }
 
   private void initRooms(String fileName) throws Exception {

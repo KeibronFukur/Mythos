@@ -1,0 +1,95 @@
+{
+    "monsters": [
+        {
+            "name":"Cultist",
+            "MonsterDescription":"A lone cultist kneels before an altar adorned with aquatic symbols, garbed in tattered robes of deep green and blue that emit a pungent, salty odor. Clutching a sacred tome embossed with the image of a monstrous fish deity, the cultist's eyes glint with fervent madness. With a quivering voice, they chant in an ancient, guttural tongue, invoking the fish god's blessings and favor as the candles flicker in the briny air.",
+            "room_id":"Hallway",
+            "attacks":[
+                {
+                    "description":"Punch",
+                    "maxDamage":"5"
+                },
+                {
+                    "description":"Kick",
+                    "maxDamage":"10"
+                },
+                {
+                    "description":"Slash",
+                    "maxDamage":"15"
+                },
+                {
+                    "description":"Stab",
+                    "maxDamage":"15"
+                }
+            ]
+        },
+        {
+            "name":"Fish Monster",
+            "MonsterDescription":"A grotesque fish monster looms before you, its slimy, scaled body glistening with a sickly sheen. Its bulbous eyes, unblinking and vacant, protrude from a misshapen head, while rows of jagged teeth line a gaping maw that drips with brackish water. Tentacle-like appendages writhe and slither from its torso, creating a nightmarish silhouette against the flickering torchlight.",
+            "room_id":"Hallway",
+            "attacks":[
+                {
+                    "description":"Bite",
+                    "maxDamage":"15"
+                },
+                {
+                    "description":"Punch",
+                    "maxDamage":"5"
+                }
+            ]
+        },
+        {
+            "name":"Shadow Wraith",
+            "MonsterDescription":"The Shadow Wraith is a malevolent entity born from the darkest corners of the night, a specter of pure darkness and malice. It moves silently through shadows, its form constantly shifting and flickering like a flame in the wind, barely perceptible to the human eye. Those who encounter it feel an overwhelming sense of dread and cold, as if the very warmth of life is being sucked away, leaving only an empty, icy void.",
+            "room_id":"Hallway",
+            "attacks":[
+                {
+                    "description":"Dreadwave",
+                    "maxDamage":"15"
+                },
+                {
+                    "description":"Etherial Claw",
+                    "maxDamage":"15"
+                },
+                {
+                    "description":"Soul Siphon",
+                    "maxDamage":"15"
+                }
+            ]
+        },
+        {
+            "name":"Kraken Priestess",
+            "MonsterDescription":"The Kraken Priestess is a sinister figure, shrouded in robes adorned with symbols of the deep sea and the ancient god she serves. Her eyes gleam with a dark, otherworldly power, and her voice carries the weight of the ocean's depths. With command over both magic and the creatures of the sea, she wields formidable power, bringing forth the wrath of the deep upon those who dare to oppose her.",
+            "room_id":"Hallway",
+            "attacks":[
+                {
+                    "description":"Prismatic Breath",
+                    "maxDamage":"15"
+                },
+                {
+                    "description":"Eldritch Eruption",
+                    "maxDamage":"15"
+                }
+            ]
+        },
+        {
+            "name":"Abyssal Squid",
+            "MonsterDescription":"The Abyssal Squid is a sea monster that dwells in the deepest, darkest depths of the ocean, emerging only to unleash its fury upon the surface world. Its body is an immense, serpentine mass covered in bioluminescent scales that emit a ghostly glow, illuminating the inky waters it calls home. With multiple rows of razor-sharp teeth, glowing eyes that pierce through the murky depths, and tentacle-like appendages, this creature embodies the terror of the deep sea.",
+            "room_id":"Hallway",
+            "attacks":[
+                {
+                    "description":"Tidal Crush",
+                    "maxDamage":"15"
+                },
+                {
+                    "description":"Constriction",
+                    "maxDamage":"10"
+                },
+                {
+                    "description":"Corrosive Ink Cloud",
+                    "maxDamage":"10"
+                }
+            ] 
+        }
+    ]
+}

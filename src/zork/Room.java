@@ -9,6 +9,7 @@ public class Room {
   private String description;
   private boolean been;
   private ArrayList<Exit> exits;
+  private ArrayList<Monster> monsters;
 
   public ArrayList<Exit> getExits() {
     return exits;
@@ -28,6 +29,7 @@ public class Room {
     this.been = been;
    // this.longDescription = longDescription;
     exits = new ArrayList<Exit>();
+    monsters = new ArrayList<Monster>();
   }
 
   public Room() {
@@ -35,6 +37,11 @@ public class Room {
     description = "DEFAULT DESCRIPTION";
     longDescription = "DEFAULT DESCRIPTION?";
     exits = new ArrayList<Exit>();
+    monsters = new ArrayList<Monster>();
+  }
+
+  public void addMonster(Monster m){
+    monsters.add(m);
   }
 
   public void addExit(Exit exit) throws Exception {
@@ -57,7 +64,9 @@ public class Room {
 
     return "Room: " + roomName + "\n\n" + longDescription + "\n" + exitString();
   }
-
+  public String monsterDescription(){
+    return "Monster: " + monsters;
+  }
   /**
    * Return a string describing the room's exits, for example "Exits: north west
    * ".
