@@ -139,10 +139,7 @@ public class Room {
   //sets and gets been
   public void setBeen(boolean been){
     this.been = been;
-  }
-
-  
-  
+  }  
 
   public boolean isBeen()
   {

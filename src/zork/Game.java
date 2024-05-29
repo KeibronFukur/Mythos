@@ -23,7 +23,7 @@ public class Game {
   public Game() {
     try {
       initRooms("src\\zork\\data\\rooms.json");
-    //  initItems("src\\zork\\data\\items.json");
+      initItems("src\\zork\\data\\items.json");
       currentRoom = roomMap.get("Bedroom");
       inventory = new Inventory(12);
     } catch (Exception e) {
@@ -53,32 +53,23 @@ public class Game {
     JSONParser parser = new JSONParser();
     JSONObject json = (JSONObject) parser.parse(jsonString);
 
-    JSONArray jsonRooms = (JSONArray) json.get("rooms");
+    JSONArray jsonItems = (JSONArray) json.get("items");
 
-    for (Object roomObj : jsonRooms) {
-      Room room = new Room();
-      String roomName = (String) ((JSONObject) roomObj).get("name");
-      String roomId = (String) ((JSONObject) roomObj).get("id");
-      String roomDescription = (String) ((JSONObject) roomObj).get("description");
-      String roomLongDescription = (String) ((JSONObject) roomObj).get("longDescription");
-      Boolean roomBeen = (Boolean)((JSONObject) roomObj).get("been");
-      room.setDescription(roomDescription);
-      room.setLongDescription(roomLongDescription);
-      room.setRoomName(roomName);
+    for (Object itemObj : jsonItems) {
+      //Item item = new Item();
+      int weight = Integer.parseInt((String) ((JSONObject) itemObj).get("weight"));
+      String itemName = (String) ((JSONObject) itemObj).get("name");
+      String itemId = (String) ((JSONObject) itemObj).get("id");
+      String roomId = (String) ((JSONObject) itemObj).get("room_id");
 
-      JSONArray jsonExits = (JSONArray) ((JSONObject) roomObj).get("exits");
-      ArrayList<Exit> exits = new ArrayList<Exit>();
-      for (Object exitObj : jsonExits) {
-        String direction = (String) ((JSONObject) exitObj).get("direction");
-        String adjacentRoom = (String) ((JSONObject) exitObj).get("adjacentRoom");
-        String keyId = (String) ((JSONObject) exitObj).get("keyId");
-        Boolean isLocked = (Boolean) ((JSONObject) exitObj).get("isLocked");
-        Boolean isOpen = (Boolean) ((JSONObject) exitObj).get("isOpen");
-        Exit exit = new Exit(direction, adjacentRoom, isLocked, keyId, isOpen);
-        exits.add(exit);
-      }
-      room.setExits(exits);
-      roomMap.put(roomId, room);
+      String itemDescription = (String) ((JSONObject) itemObj).get("description");
+      boolean isOpenable = Boolean.parseBoolean((String)((JSONObject) itemObj).get("isOpenable"));
+      Item item = new Item( weight, itemName, isOpenable );
+      item.setDescription(itemDescription);
+      item.setItemName(itemName);
+      item.setWeight(weight);
+
+      roomMap.get(roomId).getInventory().addItem(item);
     }
   }
 
