@@ -40,6 +40,7 @@
         },
         {
             "name":"Shadow Wraith",
+            "MonsterDescription":"The Shadow Wraith is a malevolent entity born from the darkest corners of the night, a specter of pure darkness and malice. It moves silently through shadows, its form constantly shifting and flickering like a flame in the wind, barely perceptible to the human eye. Those who encounter it feel an overwhelming sense of dread and cold, as if the very warmth of life is being sucked away, leaving only an empty, icy void.",
             "room_id":"Hallway",
             "attacks":[
                 {
@@ -72,8 +73,8 @@
             ]
         },
         {
-            "name":"Abyssal Leviathan",
-            "MonsterDescription":"The Abyssal Leviathan is a colossal sea monster that dwells in the darkest depths of the ocean, emerging only to unleash its fury upon the surface world. Its body is an immense, serpentine mass covered in bioluminescent scales that emit a ghostly glow, illuminating the inky waters it calls home. With multiple rows of razor-sharp teeth, glowing eyes that pierce through the murky depths, and tentacle-like appendages, this creature embodies the terror of the deep sea.",
+            "name":"Abyssal Squid",
+            "MonsterDescription":"The Abyssal Squid is a sea monster that dwells in the deepest, darkest depths of the ocean, emerging only to unleash its fury upon the surface world. Its body is an immense, serpentine mass covered in bioluminescent scales that emit a ghostly glow, illuminating the inky waters it calls home. With multiple rows of razor-sharp teeth, glowing eyes that pierce through the murky depths, and tentacle-like appendages, this creature embodies the terror of the deep sea.",
             "room_id":"Hallway",
             "attacks":[
                 {
