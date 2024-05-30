@@ -7,7 +7,7 @@
             "attacks":[
                 {
                     "description":"Punch",
-                    "maxDamage":"5"
+                    "maxDamage":"10"
                 },
                 {
                     "description":"Kick",
@@ -34,7 +34,7 @@
                 },
                 {
                     "description":"Punch",
-                    "maxDamage":"5"
+                    "maxDamage":"10"
                 }
             ]
         },
