@@ -6,6 +6,7 @@ public class Monster {
     private ArrayList<Attack> attacks;
     private String name;
     private String description;
+    private int health;
 
     public String getDescription() {
         return description;
@@ -27,5 +28,11 @@ public class Monster {
     }
     public void setDescription(String monsterDescription) {
         description = monsterDescription;
+    }
+    public void setHealth(int monsterHealth){
+        health = monsterHealth;
+    }
+    public int getHealth(){
+        return health;
     }
 }

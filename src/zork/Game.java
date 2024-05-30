@@ -45,10 +45,12 @@ public class Game {
       /*Boolean isHeavy = (Boolean)((JSONObject) monsterObj).get("isHeavy");*/
       String roomId = (String) ((JSONObject) monsterObj).get("room_id");
       String name = (String) ((JSONObject) monsterObj).get("name");
+      int health = 100;
       String monsterDescription = (String)((JSONObject) monsterObj).get("MonsterDescription");
 
       /*monster.setHeavy(isHeavy);*/
       monster.setName(name);
+      monster.setHealth(health);
       monster.setDescription(monsterDescription);
 
       ArrayList<Attack> attacks = new ArrayList<Attack>();
@@ -152,9 +154,12 @@ public class Game {
     String commandWord = command.getCommandWord();
     if (commandWord.equals("help"))
       printHelp();
-    else if (commandWord.equals("go"))
-      goRoom(command);
-    else if (commandWord.equals("quit")) {
+    else if (commandWord.equals("go")){
+      if (currentRoom.hasMonsters())
+        System.out.println("The monster won't let you.");
+      else
+        goRoom(command);
+    }else if (commandWord.equals("quit")) {
       if (command.hasSecondWord())
         System.out.println("Quit what?");
       else

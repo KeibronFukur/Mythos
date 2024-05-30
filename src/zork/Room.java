@@ -56,6 +56,10 @@ public class Room {
     return "Room: " + roomName + "\n\n" + description;
   }
 
+  public boolean hasMonsters(){
+    return monsters.size() > 0;
+  }
+
   /**
    * Return a long description of this room, on the form: You are in the kitchen.
    * Exits: north west
