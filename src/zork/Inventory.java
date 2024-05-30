@@ -30,4 +30,15 @@ public class Inventory {
     }
   }
 
+  public Item removeItem(String itemName){  
+
+    for(int i = 0; i< items.size();i++){
+      if (items.get(i).getItemName().equals(itemName)){
+        Item item = items.remove(i);
+        return item;
+      }
+    }
+    return null;
+  }
+
 }

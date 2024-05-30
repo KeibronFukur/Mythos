@@ -4,6 +4,7 @@
       "id": "Stairs",
       "name": "Stairs",
       "been": false,
+      "longDescription": "You are standing at the top of the staircase, its wooden steps worn smooth by the passage of countless feet over the years. Peaking through a window the lighthouse bathes the stairs in a gentle glow. Along its walls, paintings of seafaring vessels and ancient mariners adorn the whitewashed surface, their colors muted by the passage of time yet still vibrant with the tales they silently tell. The scent of sea air mingling with the faint aroma of aged wood to create an atmosphere thick with nostalgia of time long pass.",
       "description": "You are at the top of the stairs",
       "exits": [
         {
@@ -60,7 +61,7 @@
       "exits": [
         {
           "isLocked": false,
-          "direction": "Up",
+          "direction": "North",
           "adjacentRoom": "Stairs"
         },
         {
@@ -84,13 +85,141 @@
       "id": "Foyer",
       "name": "Foyer",
       "been": false,
-      "longDescription": "YOu are standing at the foyer floor it's weathered wooden planks line the floor from years of use, it's rustic appeal echoing the rugged coastline just beyond the threshold. Warm light dances upon the walls wooden panels , casting playful shadows that mimic the sway of seaweed in the tide. A single window by the door offers a glimpse of darkness lurking outside, while the worn rope rug underfoot adds steadyness to your feet. With the faint scent of salt lingering in the air.",
+      "longDescription": "You are standing at the foyer floor it's weathered wooden planks line the floor from years of use, it's rustic appeal echoing the rugged coastline just beyond the threshold. Warm light dances upon the walls wooden panels , casting playful shadows that mimic the sway of seaweed in the tide. A single window by the door offers a glimpse of darkness lurking outside, while the worn rope rug underfoot adds steadyness to your feet. With the faint scent of salt lingering in the air.",
       "description": "You are standing in the foyer",
       "exits": [
         {
           "isLocked": false,
           "direction": "East",
           "adjacentRoom": "Hallway"
+        },
+        {
+          "isLocked": false,
+          "isOpen": false,
+          "direction": "West",
+          "adjacentRoom": "Front Yard"
+        }
+      ]
+    },
+    {
+      "id": "Kitchen",
+      "name": "Kitchen",
+      "been": false,
+      "longDescription": "You're in the cozy kitchen of the lighthouse, bathed in the soft glow of flickering candlelight. Polished silverware gleams on the rustic wooden countertops, reflecting the warmth of the room. The scent of freshly baked bread mingles with the salty tang of the sea breeze drifting in through the open window. A cast iron stove radiates heat, casting shadows on the whitewashed walls adorned with nautical decor. In one corner, a sturdy oak table invites you to sit and enjoy a hearty meal while gazing out at the endless expanse of ocean beyond.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Hallway"
+        },
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "Dining Hall"
+        },
+        {
+          "isLocked": false,
+          "isOpen": false,
+          "direction": "South",
+          "adjacentRoom": "Cellar"
+        }
+      ]
+    },
+    {
+      "id": "Back Foyer",
+      "name": "Back Foyer",
+      "been": false,
+      "longDescription": "You're in the back foyer of the quaint lighthouse. Soft light filters in through the windows, casting a warm glow on the weathered wooden walls. The air is tinged with salt and sea breeze, carrying echoes of the ocean's song. A sturdy door leads out to the rocky cliffside, while maritime relics and old photographs adorn the space, telling stories of the lighthouse keeper's past. A faded rug covers the worn floorboards, hinting at hidden compartments or forgotten treasures waiting to be discovered.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "Hallway"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "Dining Hall"
+        }
+      ]
+    },
+    {
+      "id": "Dining Hall",
+      "name": "Dining Hall",
+      "been": false,
+      "longDescription": "You're in the spacious dining hall of the lighthouse. A long, polished mahogany table sits at the center, adorned with gleaming silverware. Through tall windows, you can see the rugged coastline and crashing waves. Maritime-themed tapestries line the walls, adding a touch of seafaring charm to the room. It's a perfect setting for enjoying a meal while taking in the breathtaking views of the sea.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "Kitchen"
+        },
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Back Foyer"
+        }
+      ]
+    },
+    {
+      "id": "Front Yard",
+      "name": "Front Yard",
+      "been": false,
+      "longDescription": "You are in a serene front yard, where meticulously trimmed grass meets the edge of a quaint stone path. Potted flowers line the pathway leading to a cozy porch. A wooden bench offers a spot to pause and enjoy the tranquility. The air is alive with the gentle fragrance of blossoms, and the distant melody of chirping birds completes the scene.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Forest"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "Stairs"
+        }
+      ]
+    },
+    {
+      "id": "Forest",
+      "name": "Forest",
+      "been": false,
+      "longDescription": "You find yourself engulfed in a dark forest, where ancient trees loom overhead, their gnarled branches twisting like fingers clawing at the sky. The air is heavy with an earthy musk, and shadows dance ominously among the dense undergrowth. A thick canopy blocks out most of the sunlight, casting the forest floor into a perpetual twilight. The only sounds are the rustling of leaves and the occasional eerie hoot of an unseen owl.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "Stairs"
+        }
+      ]
+    },
+    {
+      "id": "Stairs",
+      "name": "Stairs",
+      "been": false,
+      "longDescription": "You cautiously descend the stairs, each step echoing softly in the dimly lit corridor below.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Front Yard"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "Dock"
+        }
+      ]
+    },
+    {
+      "id": "Dock",
+      "name": "Dock",
+      "been": false,
+      "longDescription": "The dock stretches out over calm waters, weathered wood worn smooth by the lapping waves. Seagulls call out overhead as fishing boats bob gently in the harbor, their ropes creaking in the salty breeze. The scent of saltwater mingles with the tang of fish, while the distant sound of seagulls adds to the tranquil atmosphere.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Stairs"
         }
       ]
     }

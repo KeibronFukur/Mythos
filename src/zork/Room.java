@@ -9,7 +9,12 @@ public class Room {
   private String description;
   private boolean been;
   private ArrayList<Exit> exits;
+<<<<<<< HEAD
   private ArrayList<Monster> monsters;
+=======
+  //private ArrayList<Item> roomItems;
+  private Inventory inventory;
+>>>>>>> 74b212dd6f5474c6afb0d7c7035399c94f7b2765
 
   public ArrayList<Exit> getExits() {
     return exits;
@@ -17,6 +22,10 @@ public class Room {
 
   public void setExits(ArrayList<Exit> exits) {
     this.exits = exits;
+  }
+
+  public Inventory getInventory(){
+    return inventory;
   }
 
   /**
@@ -29,7 +38,11 @@ public class Room {
     this.been = been;
    // this.longDescription = longDescription;
     exits = new ArrayList<Exit>();
+<<<<<<< HEAD
     monsters = new ArrayList<Monster>();
+=======
+    inventory = new Inventory(Integer.MAX_VALUE);
+>>>>>>> 74b212dd6f5474c6afb0d7c7035399c94f7b2765
   }
 
   public Room() {
@@ -37,11 +50,16 @@ public class Room {
     description = "DEFAULT DESCRIPTION";
     longDescription = "DEFAULT DESCRIPTION?";
     exits = new ArrayList<Exit>();
+<<<<<<< HEAD
     monsters = new ArrayList<Monster>();
   }
 
   public void addMonster(Monster m){
     monsters.add(m);
+=======
+    inventory = new Inventory(Integer.MAX_VALUE);
+
+>>>>>>> 74b212dd6f5474c6afb0d7c7035399c94f7b2765
   }
 
   public void addExit(Exit exit) throws Exception {
@@ -143,7 +161,7 @@ public class Room {
   //sets and gets been
   public void setBeen(boolean been){
     this.been = been;
-  }
+  }  
 
   public boolean isBeen()
   {

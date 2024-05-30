@@ -15,6 +15,7 @@ public class Game {
 
   private Parser parser;
   private Room currentRoom;
+  private Inventory inventory;
 
   /**
    * Create the game and initialise its internal map.
@@ -22,17 +23,27 @@ public class Game {
   public Game() {
     try {
       initRooms("src\\zork\\data\\rooms.json");
+<<<<<<< HEAD
       initItems("src\\zork\\data\\rooms.json");
       initMonsters("src\\zork\\data\\monsters.json");
 
       currentRoom = roomMap.get("Hallway");
+=======
+      initItems("src\\zork\\data\\items.json");
+      currentRoom = roomMap.get("Bedroom");
+      inventory = new Inventory(12);
+>>>>>>> 74b212dd6f5474c6afb0d7c7035399c94f7b2765
     } catch (Exception e) {
       e.printStackTrace();
     }
     parser = new Parser();
   }
 
+<<<<<<< HEAD
   private void initMonsters(String fileName) throws Exception{
+=======
+  private void initGameInfo(String fileName) throws Exception {
+>>>>>>> 74b212dd6f5474c6afb0d7c7035399c94f7b2765
     Path path = Path.of(fileName);
     String jsonString = Files.readString(path);
     JSONParser parser = new JSONParser();
@@ -72,6 +83,28 @@ public class Game {
     String jsonString = Files.readString(path);
     JSONParser parser = new JSONParser();
     JSONObject json = (JSONObject) parser.parse(jsonString);
+<<<<<<< HEAD
+=======
+
+    JSONArray jsonItems = (JSONArray) json.get("items");
+
+    for (Object itemObj : jsonItems) {
+      //Item item = new Item();
+      int weight = Integer.parseInt((String) ((JSONObject) itemObj).get("weight"));
+      String itemName = (String) ((JSONObject) itemObj).get("name");
+      String itemId = (String) ((JSONObject) itemObj).get("id");
+      String roomId = (String) ((JSONObject) itemObj).get("room_id");
+
+      String itemDescription = (String) ((JSONObject) itemObj).get("description");
+      boolean isOpenable = Boolean.parseBoolean((String)((JSONObject) itemObj).get("isOpenable"));
+      Item item = new Item( weight, itemName, isOpenable );
+      item.setDescription(itemDescription);
+      item.setItemName(itemName);
+      item.setWeight(weight);
+
+      roomMap.get(roomId).getInventory().addItem(item);
+    }
+>>>>>>> 74b212dd6f5474c6afb0d7c7035399c94f7b2765
   }
 
   private void initRooms(String fileName) throws Exception {
@@ -126,7 +159,7 @@ public class Game {
       }
 
     }
-    System.out.println("Thank you for playing.  Good bye.");
+    System.out.println("Thank you for playing my game, Hope you had fun. Bye bye.");
   }
 
   /**
@@ -166,6 +199,14 @@ public class Game {
         return true; // signal that we want to quit
     } else if (commandWord.equals("eat")) {
       System.out.println("Do you really think you should be eating at a time like this?");
+    } else if (commandWord.equals("look")) {
+      System.out.println(currentRoom.longDescription());
+      //picks up an item from the room array
+    } else if (commandWord.equals("take")){
+        takeItem(command);
+    }
+    else if (commandWord.equals("drop")){
+      dropItem(command);
     }
     return false;
   }
@@ -196,6 +237,7 @@ public class Game {
     }
 
     String direction = command.getSecondWord();
+    
 
     // Try to leave current room.
     Room nextRoom = currentRoom.nextRoom(direction);
@@ -205,7 +247,7 @@ public class Game {
     else 
     {
       currentRoom = nextRoom;
-      
+
       // see if you have been in the room already
       if (nextRoom.isBeen() ) {
         System.out.println(currentRoom.shortDescription());
@@ -216,4 +258,48 @@ public class Game {
       }
     }
   }
+
+  private void takeItem(Command command){
+    if (!command.hasSecondWord()) {
+     // if there is no second word, we don't know where to go...
+     System.out.println("Take what?");
+     return;
+    }
+
+    String itemName = command.getSecondWord();
+
+    Item item = currentRoom.getInventory().removeItem(itemName);
+
+    if (item != null){
+      if (inventory.addItem(item)){
+        System.out.println("You took the " + itemName);
+      }else{
+        System.out.println("The " + itemName + " was too heavy to take.");
+      }
+    }else{
+      System.out.println("Are you seeing something I don't...");
+    }
+
+  }
+
+  private void dropItem(Command command){
+    if (!command.hasSecondWord()) {
+     // if there is no second word, we don't know where to go...
+     System.out.println("Drop what?");
+     return;
+    }
+
+    String itemName = command.getSecondWord();
+
+    Item item = currentRoom.getInventory().removeItem(itemName);
+
+    if (item != null){
+      if (inventory.addItem(item)){
+        System.out.println("You droped the " + itemName + " into " + currentRoom);
+    }else{
+      System.out.println("Are you holding something I don't see...");
+    }
+
+  }
+ }
 }

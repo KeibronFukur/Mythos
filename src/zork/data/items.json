@@ -1,16 +1,94 @@
 {
+<<<<<<< HEAD
     "items": [
         {
             "id":"straw",
             "name":"paper straw",
             "description":"abc",
+=======
+    "items":[
+        {
+            "id":"dimLantern",
+            "name":"lantern",
+            "description":"",
+            "room_id":"Bedroom",
+            "weight":"5",
+            "isOpenable":"false"
+        },
+        {
+            "id":"lantern",
+            "name":"lantern",
+            "description":"",
+>>>>>>> 74b212dd6f5474c6afb0d7c7035399c94f7b2765
             "room_id":"Hallway",
             "weight":"5",
             "isOpenable":"false"
         },
         {
+<<<<<<< HEAD
             "id":"chest",
             "name":"a big chest"
         }
     ]
 }
+=======
+            "id":"medicine",
+            "name":"medicine",
+            "description":"",
+            "room_id":"Washroom",
+            "weight":"1",
+            "isOpenable":"true",
+            "isLockable":"false"
+        },
+        {
+            "id":"razor",
+            "name":"razor",
+            "description":"",
+            "room_id":"Washroom",
+            "weight":"1",
+            "isOpenable":"false"
+        },
+        {
+            "id":"window",
+            "name":"window",
+            "description":"",
+            "room_id":"Stairs",
+            "weight":"15",
+            "isOpenable":"false"
+        },
+        {
+            "id":"steak knife",
+            "name":"steak knife",
+            "description":"You picked up a steak knife, great for cutting, sicing, even in combat.",
+            "room_id":"Dining Hall",
+            "weight":"5",
+            "isOpenable":"false"
+        },
+        {
+            "id":"kitchen knife",
+            "name":"kitchen knife",
+            "description":"You picked up a kitchen knife, not so sharp but good for cutting up food!",
+            "room_id":"Kitchen",
+            "weight":"2",
+            "isOpenable":"false"
+        },
+        {
+            "id":"old knife",
+            "name":"old knife",
+            "description":"You picked up an old, ritual knife. This one is different than other knife. It's sharper than one can see.",
+            "room_id":"Flooded Area",
+            "weight":"4",
+            "isOpenable":"false"
+        },
+        {
+            "id":"jacket",
+            "name":"jacket",
+            "description":"You grabbed the jacket. Good to keep you cozy and looking nice.",
+            "room_id":"Foyer",
+            "weight":"15",
+            "isOpenable":"false"
+        }
+    ]
+}
+    
+>>>>>>> 74b212dd6f5474c6afb0d7c7035399c94f7b2765
