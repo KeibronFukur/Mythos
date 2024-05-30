@@ -2,21 +2,26 @@ package zork;
 
 public class Item extends OpenableObject {
   private int weight;
-  private String name;
+  private String itemName;
+  private String description;
   private boolean isOpenable;
   private Inventory inventory;
 
   public Item(int weight, String name, boolean isOpenable) {
     this.weight = weight;
-    this.name = name;
+    this.itemName = name;
     this.isOpenable = isOpenable;
     this.inventory = new Inventory(Integer.MAX_VALUE);
   }
 
   public void open() {
     if (!isOpenable)
-      System.out.println("The " + name + " cannot be opened.");
+      System.out.println("The " + itemName + " cannot be opened.");
 
+  }
+
+  public String shortDescription() {
+    return "Room: " + itemName + "\n\n" + description;
   }
 
   public Inventory getInventory(){
@@ -31,12 +36,12 @@ public class Item extends OpenableObject {
     this.weight = weight;
   }
 
-  public String getName() {
-    return name;
+  public String getItemName() {
+    return itemName;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setItemName(String itemName) {
+    this.itemName = itemName;
   }
 
   public boolean isOpenable() {
@@ -47,9 +52,19 @@ public class Item extends OpenableObject {
     this.isOpenable = isOpenable;
   }
 
+<<<<<<< HEAD
 public static int getDPSvalue() {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'getDPSvalue'");
 }
 
+=======
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+>>>>>>> aaf7ca10cebe485dd4d0a01d1ec97d1fc2bafbde
 }
