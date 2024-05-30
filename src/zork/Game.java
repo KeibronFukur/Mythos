@@ -23,27 +23,18 @@ public class Game {
   public Game() {
     try {
       initRooms("src\\zork\\data\\rooms.json");
-<<<<<<< HEAD
       initItems("src\\zork\\data\\rooms.json");
       initMonsters("src\\zork\\data\\monsters.json");
 
-      currentRoom = roomMap.get("Hallway");
-=======
-      initItems("src\\zork\\data\\items.json");
       currentRoom = roomMap.get("Bedroom");
       inventory = new Inventory(12);
->>>>>>> 74b212dd6f5474c6afb0d7c7035399c94f7b2765
     } catch (Exception e) {
       e.printStackTrace();
     }
     parser = new Parser();
   }
 
-<<<<<<< HEAD
   private void initMonsters(String fileName) throws Exception{
-=======
-  private void initGameInfo(String fileName) throws Exception {
->>>>>>> 74b212dd6f5474c6afb0d7c7035399c94f7b2765
     Path path = Path.of(fileName);
     String jsonString = Files.readString(path);
     JSONParser parser = new JSONParser();
@@ -83,9 +74,6 @@ public class Game {
     String jsonString = Files.readString(path);
     JSONParser parser = new JSONParser();
     JSONObject json = (JSONObject) parser.parse(jsonString);
-<<<<<<< HEAD
-=======
-
     JSONArray jsonItems = (JSONArray) json.get("items");
 
     for (Object itemObj : jsonItems) {
@@ -104,7 +92,6 @@ public class Game {
 
       roomMap.get(roomId).getInventory().addItem(item);
     }
->>>>>>> 74b212dd6f5474c6afb0d7c7035399c94f7b2765
   }
 
   private void initRooms(String fileName) throws Exception {

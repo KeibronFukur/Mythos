@@ -52,13 +52,11 @@ public class Item extends OpenableObject {
     this.isOpenable = isOpenable;
   }
 
-<<<<<<< HEAD
 public static int getDPSvalue() {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'getDPSvalue'");
 }
 
-=======
   public String getDescription() {
     return description;
   }
@@ -66,5 +64,4 @@ public static int getDPSvalue() {
   public void setDescription(String description) {
     this.description = description;
   }
->>>>>>> aaf7ca10cebe485dd4d0a01d1ec97d1fc2bafbde
 }
