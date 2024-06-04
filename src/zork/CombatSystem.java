@@ -1,22 +1,25 @@
 package zork;
 
-// write code for encountering an enemy 
+
+import java.util.ArrayList;
+
+
+
 public class CombatSystem {
 
     
-public int PlayerHealth = 0; 
+
+
+    public int PlayerHealth = 40; 
     private int x = 0;
     private int y = (int) (Math.random() * 100);
-    private int EnemyHealth
+    private int EnemyHealth = 100;
+    private Object Monster ;
     private static final String[] validCommands = { "Attack", "Parry","Stab" };
 
     /**
      * 
      */
-    public void CombatSystem() {
-        
-    
-    }
     public boolean isCommand(String aString) {
         for (String c : validCommands) {
             if (c.equals(aString)) {
@@ -25,37 +28,57 @@ public int PlayerHealth = 0;
         }
         return false;
     }
+    public void CombatSystem() {
+        
+    
+    
+
 
     public void Combat(String aString) {
         if (aString.equals("Attack")) {
             x = 1;
-            int Y = (int) (Math.random() * 100);
-            if (Y >= 75) {
+
+            if (y >= 75) {
                 x = 0;
-                System.out.println("Open your eyes");
+                System.out.println("Open your eyes"); 
                 System.out.println("You missed");
             }
-            if (x == 1){
-                // EnemyHealth =- Item.getDPSvalue(); 
+            if (x == 1 && this.Monster.getAttacks() == 2){
+                EnemyHealth =- Item.getDPSvalue(); 
+                 System.out.println("It took damage");
 
             }
-            
+            if(x == 1 && this.Monster.getAttacks() == 1){
+
+                System.out.println("Clashed");
+            }
+            if (x == 1 && this.Monster.getAttacks() == 3){
+                PlayerHealth =- this.Monster.getAttacks();
+                System.out.println("You took damage");
+            }
         } 
         
-        if (aString.equals("Dodge") &&  Monster.getAttack() = 1 ) {
+        if (aString.equals("Dodge") &&  this.Monster.getAttacks() == 1 ) {
             x = 2;
             System.out.println("You dodged");
-            if (aString.equals("Dodge") && Monster.getAttack() = 2){
-               PlayerHealth =- Monster.getAttackValue();
+            if (aString.equals("Dodge") && this.Monster.getAttacks() == 2){
+               PlayerHealth =- this.Attack.getMaxDamage();
             }
             else {
-                System.out.println("Stop Mashing");
+                System.out.println();
             }
         } 
         if(aString.equals("Stab")){
             x = 3;
-            System.out.println("Stab");
-            if (x == 3 && Monster.getAttack() = 2 ){}           
+          if (y >= 25){
+            x = 0;
+            System.out.println("You missed and took recoil");
+            PlayerHealth =-30;
+          }
+            if (x == 3 && this.Monster.getAttacks() == 1 || 2 || 3){
+                System.out.println("Stab"); 
+                EnemyHealth =- Item.getDPSvalue()*2;
+            }           
 
         }
          else {
@@ -63,28 +86,30 @@ public int PlayerHealth = 0;
 
         }
         
-        
     }
-
-    public void showAll() {
-        for (String c : validCommands) {
-            System.out.print(c + "  ");
-        }
-        System.out.println();
-    }
-
-    public static void main(String[] args) {
-        CombatSystem combatSystem = new CombatSystem();
-        combatSystem.showAll();
-        combatSystem.Combat("Attack");
-        combatSystem.Combat("Grab");
-        combatSystem.Combat("DarkSoulsRoll");
-        
-        }
-    }
-
     
 
+
+    }
+
+}
+
+
+
+
+public void main(String[] args) {
+    CombatSystem combatSystem = new CombatSystem();
+
+    combatSystem.Combat("Attack");
+    combatSystem.Combat("Grab");
+    combatSystem.Combat("Stab");
+    
+    if(this.Room.hasMonsters() == true){
+        System.out.println("Use commands Attack,Parry and Stab")
+        }
+        
+
+}
 
 
 // if (EA = AttackFiller && x = 1 && Y >= 75)
