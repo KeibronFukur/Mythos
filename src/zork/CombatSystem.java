@@ -112,11 +112,7 @@ public void main(String[] args) {
     combatSystem.Combat("Parry");
     combatSystem.Combat("Stab");
     
-    if(this.Room.hasMonsters() == true){
-        System.out.println("Use commands Attack, Parry and Stab");
-        }
-        
-
+  
 }
 
 

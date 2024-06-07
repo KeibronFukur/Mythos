@@ -52,9 +52,6 @@ public class Item extends OpenableObject {
     this.isOpenable = isOpenable;
   }
 
-public static int getDPSvalue() {
- return DPSvalue; 
-}
 
   public String getDescription() {
     return description;

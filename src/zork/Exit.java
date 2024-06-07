@@ -41,3 +41,18 @@ public class Exit extends OpenableObject {
   }
 
 }
+// Method to toggle the state of the door (open or closed)
+
+// Method to toggle the state of the door (open or closed)
+ public void toggleDoor() {
+  if (isLocked()) {
+      System.out.println("The direction is locked.");
+  } else {
+      setOpen(!isOpen()); // Toggle the state of the door
+      if (isOpen()) {
+          System.out.println("The door is now open.");
+      } else {
+          System.out.println("The door is now closed.");
+      }
+  }
+}
