@@ -46,7 +46,9 @@
             "description":"",
             "room_id":"Washroom",
             "weight":"1",
-            "isOpenable":"false"
+            "isOpenable":"false",
+            "DPSvalue": "1"
+
         },
         {
             "id":"window",

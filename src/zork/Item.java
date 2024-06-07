@@ -14,6 +14,10 @@ public class Item extends OpenableObject {
     this.inventory = new Inventory(Integer.MAX_VALUE);
   }
 
+  public Item(int weight2, String keyName, boolean b) {
+    //TODO Auto-generated constructor stub
+  }
+
   public void open() {
     if (!isOpenable)
       System.out.println("The " + itemName + " cannot be opened.");
