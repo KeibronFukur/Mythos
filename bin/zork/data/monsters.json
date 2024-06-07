@@ -4,12 +4,13 @@
             "name":"Cultist",
             "MonsterDescription":"A lone cultist kneels before an altar adorned with aquatic symbols, garbed in tattered robes of deep green and blue that emit a pungent, salty odor. Clutching a sacred tome embossed with the image of a monstrous fish deity, the cultist's eyes glint with fervent madness. With a quivering voice, they chant in an ancient, guttural tongue, invoking the fish god's blessings and favor as the candles flicker in the briny air.",
             "room_id":"Hallway",
+            "health":"100",
             "attacks":[
                 {
-                    "description":"Weakest attack",
+                    "description":"Punch",
                     "maxDamage":"10"
                 },
-
+ 
                 {
                     "description":"Slash",
                     "maxDamage":"15"
@@ -23,7 +24,8 @@
         {
             "name":"Fish Monster",
             "MonsterDescription":"A grotesque fish monster looms before you, its slimy, scaled body glistening with a sickly sheen. Its bulbous eyes, unblinking and vacant, protrude from a misshapen head, while rows of jagged teeth line a gaping maw that drips with brackish water. Tentacle-like appendages writhe and slither from its torso, creating a nightmarish silhouette against the flickering torchlight.",
-            "room_id":"Hallway",
+            "room_id":"Bedroom",
+            "health":"100",
             "attacks":[
                 {
                     "description":"Bite",
@@ -34,16 +36,17 @@
                     "maxDamage":"10"
                 },
                 {
-                    "description":"I am a Sturgeon",
+                    "description":"Fish Bullshit",
                     "maxDamage":"25"
                 }
-                
+               
             ]
         },
         {
             "name":"Shadow Wraith",
             "MonsterDescription":"The Shadow Wraith is a malevolent entity born from the darkest corners of the night, a specter of pure darkness and malice. It moves silently through shadows, its form constantly shifting and flickering like a flame in the wind, barely perceptible to the human eye. Those who encounter it feel an overwhelming sense of dread and cold, as if the very warmth of life is being sucked away, leaving only an empty, icy void.",
-            "room_id":"Hallway",
+            "room_id":"Stairs",
+            "health":"100",
             "attacks":[
                 {
                     "description":"Dreadwave",
@@ -62,7 +65,8 @@
         {
             "name":"Kraken Priestess",
             "MonsterDescription":"The Kraken Priestess is a sinister figure, shrouded in robes adorned with symbols of the deep sea and the ancient god she serves. Her eyes gleam with a dark, otherworldly power, and her voice carries the weight of the ocean's depths. With command over both magic and the creatures of the sea, she wields formidable power, bringing forth the wrath of the deep upon those who dare to oppose her.",
-            "room_id":"Hallway",
+            "room_id":"Washroom",
+            "health":"100",
             "attacks":[
                 {
                     "description":"Prismatic Breath",
@@ -81,7 +85,8 @@
         {
             "name":"Abyssal Squid",
             "MonsterDescription":"The Abyssal Squid is a sea monster that dwells in the deepest, darkest depths of the ocean, emerging only to unleash its fury upon the surface world. Its body is an immense, serpentine mass covered in bioluminescent scales that emit a ghostly glow, illuminating the inky waters it calls home. With multiple rows of razor-sharp teeth, glowing eyes that pierce through the murky depths, and tentacle-like appendages, this creature embodies the terror of the deep sea.",
-            "room_id":"Hallway",
+            "room_id":"Foyer",
+            "health":"100",
             "attacks":[
                 {
                     "description":"Tidal Crush",
@@ -95,7 +100,148 @@
                     "description":"Corrosive Ink Cloud",
                     "maxDamage":"10"
                 }
-            ] 
+            ]
+        },
+        {
+            "name":"Coral Crawler",
+            "MonsterDescription":"The Coral Crawler is a small, crab-like creature with a body covered in vibrant, living coral. It moves swiftly across surfaces and can blend into its surroundings by changing the color of its coral.",
+            "room_id":"Kitchen",
+            "health":"100",
+            "attacks":[
+                {
+                    "description":"Coral Spike",
+                    "maxDamage":"15"
+                },
+                {
+                    "description":"Reef Sword",
+                    "maxDamage":"10"
+                },
+                {
+                    "description":"Seaweed Tangle",
+                    "maxDamage":"10"
+                }
+            ]  
+        },
+        {
+            "name":"Electric Eel Serpent",
+            "MonsterDescription":"This serpentine monster is about the size of a large python and has bioluminescent patterns along its body that glow with a blue electric charge. It slithers quickly and can emit electrical shocks.",
+            "room_id":"Back Foyer",
+            "health":"100",
+            "attacks":[
+                {
+                    "description":"Electric Shock",
+                    "maxDamage":"10"
+                },
+                {
+                    "description":"Lightning Wrap",
+                    "maxDamage":"20"
+                },
+                {
+                    "description":"Electromagnetic Pulse",
+                    "maxDamage":"10"
+                }
+            ]  
+        },
+        {
+            "name":"Jellyfish Specter",
+            "MonsterDescription":"The Jellyfish Specter is a ghostly, translucent creature that floats eerily in the air. Its tentacles glow faintly and can phase through solid objects.",
+            "room_id":"Dining Hall",
+            "health":"100",
+            "attacks":[
+                {
+                    "description":"Phantom Pulse",
+                    "maxDamage":"15"
+                },
+                {
+                    "description":"Ethereal Drift",
+                    "maxDamage":"5"
+                },
+                {
+                    "description":"Spectral Sting",
+                    "maxDamage":"10"
+                }
+            ]  
+        },
+        {
+            "name":"Barnacle Brute",
+            "MonsterDescription":"A hulking humanoid figure encrusted with barnacles and sea shells. The Barnacle Brute is slow but incredibly strong, with a body toughened by its rocky exterior.",
+            "room_id":"Front Yard",
+            "health":"100",
+            "attacks":[
+                {
+                    "description":"Shell Slam",
+                    "maxDamage":"5"
+                },
+                {
+                    "description":"Barnacle Burst",
+                    "maxDamage":"15"
+                },
+                {
+                    "description":"Crushing Grip",
+                    "maxDamage":"20"
+                }
+            ]  
+        },
+        {
+            "name":"Siren's Shadow",
+            "MonsterDescription":"The Siren's Shadow is a mysterious, mermaid-like creature with dark, flowing hair and an eerie, haunting beauty. It has the ability to manipulate sound and shadows.",
+            "room_id":"Forest",
+            "health":"100",
+            "attacks":[
+                {
+                    "description":"Sonic Screech",
+                    "maxDamage":"10"
+                },
+                {
+                    "description":"Shadow Strike",
+                    "maxDamage":"15"
+                },
+                {
+                    "description":"Dark Tide",
+                    "maxDamage":"10"
+                }
+            ]  
+        },
+        {
+            "name":"Abyssal Angler",
+            "MonsterDescription":"A fearsome fish-like monster with a large, glowing lure dangling from its forehead. The Abyssal Angler has sharp teeth and a bioluminescent body that can emit blinding flashes.",
+            "room_id":"Stairs",
+            "health":"100",
+            "attacks":[
+                {
+                    "description":"Lure Strike",
+                    "maxDamage":"10"
+                },
+                {
+                    "description":"Blinding Flash",
+                    "maxDamage":"5"
+                },
+                {
+                    "description":"Chomp",
+                    "maxDamage":"10"
+                }
+            ]  
+        },
+        {
+            "name":"Seaweed Strangler",
+            "MonsterDescription":"The Seaweed Strangler is a vine-like creature made entirely of animate seaweed. It moves fluidly and can stretch its body to wrap around its prey.",
+            "room_id":"Dock",
+            "health":"100",
+            "attacks":[
+                {
+                    "description":"Vine Whip",
+                    "maxDamage":"10"
+                },
+                {
+                    "description":"Entangle",
+                    "maxDamage":"10"
+                },
+                {
+                    "description":"Toxic Spores",
+                    "maxDamage":"15"
+                }
+            ]  
         }
+ 
     ]
 }

@@ -8,6 +8,7 @@ public class Monster extends Room{
     private String description;
     private int health;
    
+   
 
     public String getDescription() {
         return description;
@@ -30,8 +31,8 @@ public class Monster extends Room{
     public void setDescription(String monsterDescription) {
         description = monsterDescription;
     }
-    public void setHealth(int monsterHealth){
-        health = monsterHealth;
+    public void setHealth(){
+         health = 100;
     }
     public int getHealth(){
         return health;

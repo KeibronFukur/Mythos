@@ -52,7 +52,7 @@ public class Game {
 
       /*monster.setHeavy(isHeavy);*/
       monster.setName(name);
-      monster.setHealth(health);
+      monster.setHealth();
       monster.setDescription(monsterDescription);
 
       ArrayList<Attack> attacks = new ArrayList<Attack>();
