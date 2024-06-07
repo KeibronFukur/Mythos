@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 
 
-public class CombatSystem extends Room{
+public class CombatSystem extends Monster{
 
     
 
@@ -61,7 +61,7 @@ public class CombatSystem extends Room{
             x = 2;
             System.out.println("You dodged");
             if (aString.equals("Dodge") && this.Monster.getAttacks() == 2){
-               PlayerHealth =- this.Monster.getAttacks.getMaxDamage();
+               PlayerHealth =- this..getAttacks.getMaxDamage();
             }
             else {
                 System.out.println();
@@ -90,6 +90,7 @@ public class CombatSystem extends Room{
     
 
     }
+
 
 }
 
