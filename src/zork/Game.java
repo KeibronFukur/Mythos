@@ -195,8 +195,12 @@ public class Game {
     else if (commandWord.equals("drop")){
       dropItem(command);
     }
+    else if (commandWord.equals("open")){
+      openExit(command);
+    }
     return false;
   }
+
 
   // implementations of user commands:
 
@@ -245,7 +249,36 @@ public class Game {
       }
     }
   }
-
+  private void openExit(Command command) {
+    if (!command.hasSecondWord()) {
+        System.out.println("Open what?");
+        return;
+    }
+ 
+    String direction = command.getSecondWord();
+ 
+    // Check if the exit exists in the current room
+    for (Exit exit : currentRoom.getExits()) {
+        if (exit.getDirection().equalsIgnoreCase(direction)) {
+            if (exit.isLocked()) {
+                System.out.println("The exit is locked. You need a key to open it.");
+                return;
+            }
+ 
+            if (exit.isOpen()) {
+                System.out.println("The exit is already open.");
+                return;
+            }
+ 
+            // Open the exit
+            exit.setOpen(true);
+            System.out.println("You opened the " + direction + " exit.");
+            return;
+        }
+    }
+ 
+    System.out.println("There is no exit in that direction.");
+}
   private void takeItem(Command command){
     if (!command.hasSecondWord()) {
      // if there is no second word, we don't know where to go...
