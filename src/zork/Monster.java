@@ -2,7 +2,7 @@ package zork;
 
 import java.util.ArrayList;
 
-public class Monster {
+public class Monster extends Room{
     private ArrayList<Attack> attacks;
     private String name;
     private String description;

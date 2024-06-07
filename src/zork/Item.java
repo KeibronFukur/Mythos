@@ -7,7 +7,7 @@ public class Item extends OpenableObject {
   private boolean isOpenable;
   private Inventory inventory;
 
-  public Item(int weight, String name, boolean isOpenable) {
+  public Item(int weight, String name, boolean isOpenable, int DPSvalue) {
     this.weight = weight;
     this.itemName = name;
     this.isOpenable = isOpenable;
@@ -53,8 +53,7 @@ public class Item extends OpenableObject {
   }
 
 public static int getDPSvalue() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getDPSvalue'");
+ return DPSvalue; 
 }
 
   public String getDescription() {

@@ -1,6 +1,6 @@
 package zork;
 
-public class Attack {
+public class Attack extends Monster{
     private String description;
     private int maxDamage;
 
