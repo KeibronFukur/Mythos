@@ -81,12 +81,12 @@
             "room_id":"Flooded Area",
             "weight":"5",
             "isOpenable":"false",
-            "DPSvalue":"50"
+            "DPSvalue":"75"
         },
         {
             "id":"jacket",
             "name":"jacket",
-            "description":"You grabbed the jacket. Good to keep you cozy and looking nice.",
+            "description":"You grabbed the jacket. Good to keep you cozy and looking nice. Though the blood on your hands will never wash.",
             "room_id":"Foyer",
             "weight":"15",
             "isOpenable":"false"

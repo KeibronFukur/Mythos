@@ -52,6 +52,9 @@ public class Room {
     inventory = new Inventory(Integer.MAX_VALUE);
 
   }
+  public void Remove(Monster m){
+    monsters.remove(m);
+  }
 
   public void addExit(Exit exit) throws Exception {
     exits.add(exit);

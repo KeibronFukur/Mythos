@@ -6,7 +6,7 @@
             "room_id":"Hallway",
             "attacks":[
                 {
-                    "description":"Arial Math OST",
+                    "description":"Weakest attack",
                     "maxDamage":"10"
                 },
 

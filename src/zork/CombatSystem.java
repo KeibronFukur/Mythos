@@ -52,7 +52,7 @@ public class CombatSystem extends Room{
                 System.out.println("Clashed");
             }
             if (x == 1 && this.m.getAttacks() == 3){
-                PlayerHealth =- this.m.maxDamage();
+                PlayerHealth =- this.m.getMaxDamage();
                 System.out.println("You took damage");
             }
         } 
@@ -61,11 +61,11 @@ public class CombatSystem extends Room{
             x = 2;
             System.out.println("Parry");
             if (aString.equals("Parry") && this.m.getAttacks() == 2){
-               PlayerHealth =- this.m.getMaxDamage();
+               PlayerHealth =- this.m.getMaxDamage()*2;
                
             }
             else {
-                System.out.println();
+                System.out.println("You barley parried");
             }
         } 
         if(aString.equals("Stab")){
@@ -85,18 +85,21 @@ public class CombatSystem extends Room{
             System.out.println("Not A valid command try using an actual command");
 
         }
+        if(PlayerHealth <= 0){
+            Game game = new Game();
+            game.play();
+        }
+            if(EnemyHealth <= 0){
+                Monster.remove(m);
         
+            }
     }
     
 
 
-    
     }
-    public void remove(Monster m){
 
-    
-
-    }
+ 
     }
 
 
