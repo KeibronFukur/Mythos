@@ -47,7 +47,7 @@ public class CombatSystem extends Monster{
                  System.out.println("It took damage");
 
             }
-            if(x == 1 && this.Monster.getAttacks() == 1){
+            if(x == 1 && this.m.getAttacks() == 1){
 
                 System.out.println("Clashed");
             }
@@ -57,10 +57,10 @@ public class CombatSystem extends Monster{
             }
         } 
         
-        if (aString.equals("Dodge") &&  this.Monster.getAttacks() == 1 ) {
+        if (aString.equals("Parry") &&  this.Monster.getAttacks() == 1 ) {
             x = 2;
-            System.out.println("You dodged");
-            if (aString.equals("Dodge") && this.Monster.getAttacks() == 2){
+            System.out.println("Parry");
+            if (aString.equals("Parry") && this.Monster.getAttacks() == 2){
                PlayerHealth =- this..getAttacks.getMaxDamage();
             }
             else {
