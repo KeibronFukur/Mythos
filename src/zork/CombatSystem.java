@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 
 
-public class CombatSystem {
+public class CombatSystem extends Room{
 
     
 
@@ -14,11 +14,10 @@ public class CombatSystem {
     private int x = 0;
     private int y = (int) (Math.random() * 100);
     private int EnemyHealth = 100;
-    private Object Monster ;
+    private Object Monster;
     private static final String[] validCommands = { "Attack", "Parry","Stab" };
 
     /**
-     * 
      */
     public boolean isCommand(String aString) {
         for (String c : validCommands) {
@@ -43,7 +42,7 @@ public class CombatSystem {
                 System.out.println("Open your eyes"); 
                 System.out.println("You missed");
             }
-            if (x == 1 && this.Monster.getAttacks() == 2){
+            if (x == 1 && ((Object) this.Monster).getAttacks() == 2){
                 EnemyHealth =- Item.getDPSvalue(); 
                  System.out.println("It took damage");
 
@@ -62,7 +61,7 @@ public class CombatSystem {
             x = 2;
             System.out.println("You dodged");
             if (aString.equals("Dodge") && this.Monster.getAttacks() == 2){
-               PlayerHealth =- this.Attack.getMaxDamage();
+               PlayerHealth =- this.Monster.getAttacks.getMaxDamage();
             }
             else {
                 System.out.println();
@@ -75,20 +74,20 @@ public class CombatSystem {
             System.out.println("You missed and took recoil");
             PlayerHealth =-30;
           }
-            if (x == 3 && this.Monster.getAttacks() == 1 || 2 || 3){
+           else if (x == 3 && this.Monster.getAttacks() == 1 || 2 || 3){
                 System.out.println("Stab"); 
                 EnemyHealth =- Item.getDPSvalue()*2;
             }           
 
         }
          else {
-            System.out.println("Invalid command try again dude");
+            System.out.println("Not A valid command try using an actual command");
 
         }
         
     }
     
-
+    
 
     }
 
@@ -101,25 +100,15 @@ public void main(String[] args) {
     CombatSystem combatSystem = new CombatSystem();
 
     combatSystem.Combat("Attack");
-    combatSystem.Combat("Grab");
+    combatSystem.Combat("Parry");
     combatSystem.Combat("Stab");
     
     if(this.Room.hasMonsters() == true){
-        System.out.println("Use commands Attack,Parry and Stab")
+        System.out.println("Use commands Attack, Parry and Stab");
         }
         
 
 }
 
 
-// if (EA = AttackFiller && x = 1 && Y >= 75)
-// System.out.println("You clashed")
-//if (EA = 1 && x = 2){
-//System.out.println("You parried")
-//
-//int Z = item.getDPSvalue(); 
-// EnemyHealth =- Z; 
-//}
-//if (EA = 1 && x = 3){
-//int PH = 1; 
 

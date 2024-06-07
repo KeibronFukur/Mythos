@@ -9,10 +9,7 @@
                     "description":"Punch",
                     "maxDamage":"10"
                 },
-                {
-                    "description":"Kick",
-                    "maxDamage":"10"
-                },
+
                 {
                     "description":"Slash",
                     "maxDamage":"15"
@@ -35,7 +32,12 @@
                 {
                     "description":"Punch",
                     "maxDamage":"10"
+                },
+                {
+                    "description":"Fish Bullshit",
+                    "maxDamage":"25"
                 }
+                
             ]
         },
         {
@@ -69,6 +71,10 @@
                 {
                     "description":"Eldritch Eruption",
                     "maxDamage":"15"
+                },
+                {
+                    "description":"Eldritch Bullshit",
+                    "maxDamage":"20"
                 }
             ]
         },

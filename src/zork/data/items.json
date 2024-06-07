@@ -61,8 +61,9 @@
             "name":"steak knife",
             "description":"You picked up a steak knife, great for cutting, sicing, even in combat.",
             "room_id":"Dining Hall",
-            "weight":"5",
-            "isOpenable":"false"
+            "weight":"4",
+            "isOpenable":"false",
+            "DPSvalue" :"20"
         },
         {
             "id":"kitchen knife",
@@ -70,15 +71,17 @@
             "description":"You picked up a kitchen knife, not so sharp but good for cutting up food!",
             "room_id":"Kitchen",
             "weight":"2",
-            "isOpenable":"false"
+            "isOpenable":"false",
+            "DPSvalue":"5"
         },
         {
-            "id":"old knife",
-            "name":"old knife",
-            "description":"You picked up an old, ritual knife. This one is different than other knife. It's sharper than one can see.",
+            "id":"Real Knife",
+            "name":"Reak Knife",
+            "description":"Here we are! (Undertale Reference?)",
             "room_id":"Flooded Area",
-            "weight":"4",
-            "isOpenable":"false"
+            "weight":"5",
+            "isOpenable":"false",
+            "DPSvalue":"50"
         },
         {
             "id":"jacket",
