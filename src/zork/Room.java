@@ -103,23 +103,26 @@ public class Room {
   public Room nextRoom(String direction) {
     try {
       for (Exit exit : exits) {
-
+ 
         if (exit.getDirection().equalsIgnoreCase(direction)) {
+          if (exit.isOpen()) {
           String adjacentRoom = exit.getAdjacentRoom();
-
           return Game.roomMap.get(adjacentRoom);
+        } else {
+          System.out.println("The door is closed. You need to open it first.");
+          return null;
         }
-
+      }
       }
     } catch (IllegalArgumentException ex) {
       System.out.println(direction + " is not a valid direction.");
       return null;
     }
-
+ 
     System.out.println(direction + " is not a valid direction.");
     return null;
   }
-
+  // 
   /*
    * private int getDirectionIndex(String direction) { int dirIndex = 0; for
    * (String dir : directions) { if (dir.equals(direction)) return dirIndex; else

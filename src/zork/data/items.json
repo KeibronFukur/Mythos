@@ -1,11 +1,11 @@
 {
-<<<<<<< HEAD
+
     "items": [
         {
             "id":"straw",
             "name":"paper straw",
             "description":"abc",
-=======
+
     "items":[
         {
             "id":"dimLantern",
@@ -13,25 +13,27 @@
             "description":"",
             "room_id":"Bedroom",
             "weight":"5",
-            "isOpenable":"false"
+            "isOpenable":"false",
+            "DPSvalue": "0"
+
         },
         {
             "id":"lantern",
             "name":"lantern",
             "description":"",
->>>>>>> 74b212dd6f5474c6afb0d7c7035399c94f7b2765
+
             "room_id":"Hallway",
             "weight":"5",
             "isOpenable":"false"
         },
         {
-<<<<<<< HEAD
+
             "id":"chest",
             "name":"a big chest"
         }
     ]
-}
-=======
+},
+        {
             "id":"medicine",
             "name":"medicine",
             "description":"",
@@ -47,7 +49,7 @@
             "room_id":"Washroom",
             "weight":"1",
             "isOpenable":"false",
-            "DPSvalue": "1"
+            "DPSvalue": "5"
 
         },
         {
@@ -74,7 +76,7 @@
             "room_id":"Kitchen",
             "weight":"2",
             "isOpenable":"false",
-            "DPSvalue":"5"
+            "DPSvalue":"10"
         },
         {
             "id":"Real Knife",
@@ -97,4 +99,4 @@
     ]
 }
     
->>>>>>> 74b212dd6f5474c6afb0d7c7035399c94f7b2765
+

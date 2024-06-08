@@ -9,13 +9,15 @@
       "exits": [
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "West",
           "adjacentRoom": "Bedroom"
         },
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "Down",
-          "adjacentRoom": "Hallway"
+                  "adjacentRoom": "Hallway"
         }
       ]
     },
@@ -28,11 +30,13 @@
       "exits": [
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "East",
           "adjacentRoom": "Stairs"
         },
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "South",
           "adjacentRoom": "Washroom"
         }
@@ -47,6 +51,7 @@
       "exits": [
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "North",
           "adjacentRoom": "Bedroom"
         }
@@ -56,26 +61,31 @@
       "id": "Hallway",
       "name": "Hallway",
       "been": false,
+      "isOpen": true,
       "longDescription": "You are walking through the hallway, it stretches forth, its walls adorned with weathered wood panels bearing the marks of salt-laden air and time's gentle erosion. A soft luminescence emanates from strategically placed lamps, casting a warm, inviting glow. The air is heavy with the scent of sea spray, while the rhythm of waves crashing against the rocky shore provides a backdrop to the slience and stillness in the air.",
       "description": "You are in the hallway",
       "exits": [
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "North",
           "adjacentRoom": "Stairs"
         },
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "West",
           "adjacentRoom": "Foyer"
         },
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "East",
           "adjacentRoom": "Backdoor"
         },
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "South",
           "adjacentRoom": "Kitchen"
         }
@@ -90,6 +100,7 @@
       "exits": [
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "East",
           "adjacentRoom": "Hallway"
         },
@@ -109,11 +120,13 @@
       "exits": [
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "North",
           "adjacentRoom": "Hallway"
         },
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "East",
           "adjacentRoom": "Dining Hall"
         },
@@ -133,11 +146,13 @@
       "exits": [
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "West",
           "adjacentRoom": "Hallway"
         },
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "South",
           "adjacentRoom": "Dining Hall"
         }
@@ -151,11 +166,13 @@
       "exits": [
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "West",
           "adjacentRoom": "Kitchen"
         },
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "North",
           "adjacentRoom": "Back Foyer"
         }
@@ -169,11 +186,13 @@
       "exits": [
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "North",
           "adjacentRoom": "Forest"
         },
         {
           "isLocked": false,
+          "isOpen": false,
           "direction": "South",
           "adjacentRoom": "Stairs"
         }
@@ -187,6 +206,7 @@
       "exits": [
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "South",
           "adjacentRoom": "Stairs"
         }
@@ -200,11 +220,13 @@
       "exits": [
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "North",
           "adjacentRoom": "Front Yard"
         },
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "South",
           "adjacentRoom": "Dock"
         }
@@ -218,10 +240,170 @@
       "exits": [
         {
           "isLocked": false,
+          "isOpen": true,
           "direction": "North",
           "adjacentRoom": "Stairs"
+        },
+        {
+          "id": "Back Yard",
+          "name": "Back Yard",
+          "been": false,
+          "longDescription": "Nestled against the ocean's edge, the backyard of your home brims with the sound of rain drops. With the rhythmic melody of crashing waves as its accompaniment, this space invites you to stay and ponder about the distant past. Greenery brought to a mush my the storm provides a buffer between the house and the grand light house awaiting you. As the salty breeze kisses your skin adn thunder fills the air, you find solace in this coastal sanctuary, where time seems to stand still amidst the ever-changing tides.",
+          "exits": [
+            {
+              "isLocked": false,
+              "isOpen": true,
+              "direction": "West",
+              "adjacentRoom": "Back Foyer"
+            },
+            {
+              "isLocked": false,
+              "isOpen": true,
+              "direction": "East",
+              "adjacentRoom": "Ground Floor"
+            }
+          ]
+        },
+        {
+          "id": "Ground Floor",
+          "name": "Ground Floor",
+          "been": false,
+          "longDescription": "The ground floor of a lighthouse is a rugged space, designed for functionality and durability. It serves as the foundation upon which the rest of the structure stands, crafted from sturdy materials like concrete or stone. Inside, essential machinery hums with activity, including generators, electrical panels, and pumps, all vital for powering the lighthouse's light source. Alongside the equipment, storage nooks house tools, spare parts, and maintenance supplies, ensuring the smooth operation and upkeep of the beacon. While the ground floor may lack the charm of the upper levels, its solid construction and utilitarian design form the backbone of the lighthouse, anchoring it firmly to the coastal landscape.",
+          "exits": [
+            {
+              "isLocked": false,
+              "isOpen": true,
+              "direction": "West",
+              "adjacentRoom": "Back Foyer"
+            },
+            {
+              "isLocked": false,
+              "isOpen": true,
+              "direction": "Up",
+              "adjacentRoom": "First Floor"
+            }
+          ]
+        },
+        {
+          "id": "First Floor",
+          "name": "First Floor",
+          "been": false,
+          "longDescription": "The second floor of a lighthouse offers a transition from the functional space of the ground level to the more specialized areas higher up. As one ascends from the ground, the second floor often serves as a hub of activity and a functional midpoint within the structure. Here, you may find administrative spaces such as offices or workrooms where keepers or maintenance personnel manage the operational aspects of the lighthouse. Additionally, there may be living quarters for the staff, providing a comfortable retreat from the demands of their duties. Windows offer panoramic views of the surrounding landscape and seascape, offering both practical surveillance of the maritime environment and moments of respite amidst the beauty of the coastal setting. Overall, the second floor combines functionality with a touch of comfort, bridging the gap between the rugged practicality of the ground level and the specialized purpose of the higher floors.",
+          "exits": [
+            {
+              "isLocked": false,
+              "isOpen": true,
+              "direction": "Up",
+              "adjacentRoom": "Second Floor"
+            },
+            {
+              "isLocked": false,
+              "isOpen": true,
+              "direction": "Down",
+              "adjacentRoom": "Ground Floor"
+            }
+          ]
+        },
+        {
+          "id": "Second Floor",
+          "name": "Second Floor",
+          "been": false,
+          "longDescription": "Moving up from the first floor, one typically encounters the heart of the lighthouse's operation: the light room. This floor houses the intricate apparatus responsible for emitting the beacon that guides ships safely through the darkness. The room is dominated by the light source itself, whether it's a traditional rotating Fresnel lens, a modern LED system, or another type of illuminating device. Surrounding the light are mechanisms for its operation, including gears, motors, and control panels. Windows or openings in the walls allow the light to shine out across the horizon, providing a guiding beacon to mariners. The atmosphere on this floor is one of focused purpose, as the keepers or technicians attend to the critical task of maintaining the light and ensuring its reliability for maritime navigation.",
+          "exits": [
+            {
+              "isLocked": false,
+              "isOpen": true,
+              "direction": "Up",
+              "adjacentRoom": "Beacon"
+            },
+            {
+              "isLocked": false,
+              "isOpen": true,
+              "direction": "Down",
+              "adjacentRoom": "First Floor"
+            }
+          ]
+        },
+        {
+          "id": "Beacon",
+          "name": "Beacon",
+          "been": false,
+          "longDescription": "The beacon, located at the topmost part of the lighthouse, is the defining feature of the structure and serves as a guiding light for ships at sea. Housed within the light room or lantern room, the beacon emits a powerful and steady light that can be seen from miles away, even in adverse weather conditions. The type of beacon can vary depending on the lighthouse's design and technology, ranging from traditional Fresnel lenses to modern LED systems. Regardless of the specific technology, the beacon is meticulously maintained to ensure its reliability and visibility, crucial for maritime navigation and the safety of ships at sea. From its lofty perch atop the lighthouse, the beacon stands as a symbol of hope and guidance, guiding sailors through the darkness and safely guiding them to their destination.",
+          "exits": [
+            {
+              "isLocked": false,
+              "isOpen": true,
+              "direction": "Down",
+              "adjacentRoom": "Second Floor"
+            }
+          ]
+        },
+
+    {
+          "id": "Stairs2",
+          "name": "Stairs2",
+          "been": false,
+          "longDescription": "You cautiously descend the stairs, each step echoing softly in the dimly lit corridor below.",
+          "exits": [
+            {
+              "isLocked": false,
+              "isOpen": true,
+              "direction": "North",
+              "adjacentRoom": "Front Yard"
+            },
+            {
+              "isLocked": false,
+              "isOpen": true,
+              "direction": "South",
+              "adjacentRoom": "Dock"
+            },
+            {
+              "isLocked": false,
+              "isOpen": true,
+              "direction": "East",
+              "adjacentRoom": "Cliff"
+            }
+          ]
+        },
+        {
+          "id": "Cliff",
+          "name": "Cliff",
+          "been": false,
+          "longDescription": "As the storm rages, the cliff stands defiant against the onslaught of wind and rain. Jagged and imposing, it juts out into the tumultuous sea, its rocky face weathered by centuries of relentless waves. Dark clouds swirl overhead, casting an ominous shadow upon the landscape below. Thunder rumbles in the distance, echoing off the sheer walls of the cliff, while lightning streaks across the sky, illuminating the churning waters below. Despite the chaos of the storm, there's a raw beauty to the scene, as if nature itself is showcasing its untamed power and majesty.",
+          "exits": [
+            {
+              "isLocked": false,
+              "isOpen": true,
+              "direction": "East",
+              "adjacentRoom": "Stairs2"
+            },
+            {
+              "isLocked": false,
+              "isOpen": true,
+              "direction": "Down",
+              "adjacentRoom": "Cliff"
+            }
+          ]
+        },
+        {
+          "id": "Cave",
+          "name": "Cave",
+          "been": false,
+          "longDescription": "Nestled within the rugged cliffs, a hidden cave beckons with an air of mystery and intrigue. Its entrance, concealed by overhanging vines and shadowy recesses, invites exploration into the depths of the unknown. As you step inside, the cool, damp air envelops you, carrying the scent of earth and ancient stone. The cave's walls, adorned with intricate formations of stalactites and stalagmites, glisten in the faint light filtering through cracks above. Echoes of dripping water resonate through the chamber, creating a haunting melody that reverberates in the silence. Deep within the darkness, secrets are whispered, and the passage of time seems to stand still. With each step, you venture further into the heart of the cave, captivated by its timeless beauty and the sense of wonder it inspires.",
+          "exits": [
+            {
+              "isLocked": false,
+              "isOpen": true,
+              "direction": "Up",
+              "adjacentRoom": "Cliff"
+            }
+          ]
         }
+        
+        
+        
       ]
     }
   ]
+  
 }

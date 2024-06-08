@@ -189,9 +189,18 @@ public class Game {
     } else if (commandWord.equals("look")) {
       System.out.println(currentRoom.longDescription());
       //picks up an item from the room array
-    } else if (commandWord.equals("take")){
+    }
+    
+    else if (commandWord.equals("take")){
         takeItem(command);
     }
+    else if (commandWord.equals("fix boat")){
+      for( Item myItem : inventory.getItemsList()){
+          if(myItem.equals("tool box")){
+            System.out.println("Thank you for playing. As you sail off the rugged coastline of the island, the wind whips through the rigging of your newly fixed boat, carrying a sense of anticipation and trepidation. Dark clouds loom overhead, signaling the approach of an impending storm. With each wave crashing against the hull, you feel the adrenaline surge within you as you navigate the vessel through the choppy waters. As soon as you clear the protective embrace of the island's cliffs, a remarkable transformation unfolds. The storm that had been gathering ominously overhead seems to dissipate instantaneously, as if the island itself holds some mystical power over the weather. The skies above clear, unveiling a breathtaking panorama of stars glittering against the inky expanse. In that moment, a profound sense of awe washes over you, as if nature itself has conspired to grant you safe passage through the tempest. With the storm now behind you, you continue your journey with newfound confidence, guided by the celestial lights above and the tranquil embrace of the open sea.");
+
+            boolean finished = true;
+          }
     else if (commandWord.equals("drop")){
       dropItem(command);
     }
@@ -199,7 +208,9 @@ public class Game {
       openExit(command);
     }
     return false;
+  
   }
+  
 
 
   // implementations of user commands:
@@ -232,7 +243,7 @@ public class Game {
 
     // Try to leave current room.
     Room nextRoom = currentRoom.nextRoom(direction);
-
+    
     if (nextRoom == null)
       System.out.println("There is no room that way, dummkopf!");
     else 
@@ -279,6 +290,7 @@ public class Game {
  
     System.out.println("There is no exit in that direction.");
 }
+
   private void takeItem(Command command){
     if (!command.hasSecondWord()) {
      // if there is no second word, we don't know where to go...

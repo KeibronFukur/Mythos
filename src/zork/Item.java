@@ -6,6 +6,7 @@ public class Item extends OpenableObject {
   private String description;
   private boolean isOpenable;
   private Inventory inventory;
+  private int DPSvalue1;
 
   public Item(int weight, String name, boolean isOpenable, int DPSvalue) {
     this.weight = weight;
@@ -50,6 +51,9 @@ public class Item extends OpenableObject {
 
   public boolean isOpenable() {
     return isOpenable;
+  }
+  public int getDPSvalue() {
+    return DPSvalue1;
   }
 
   public void setOpenable(boolean isOpenable) {
