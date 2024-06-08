@@ -86,6 +86,7 @@ public class CombatSystem extends Room{
 
         }
         if(PlayerHealth <= 0){
+            System.err.println("死");
             Game game = new Game();
             game.play();
         }

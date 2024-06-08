@@ -52,7 +52,7 @@ public class Item extends OpenableObject {
   public boolean isOpenable() {
     return isOpenable;
   }
-  public int getDPSvalue() {
+  public static int getDPSvalue() {
     return DPSvalue1;
   }
 

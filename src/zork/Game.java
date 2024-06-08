@@ -176,7 +176,7 @@ public class Game {
       printHelp();
     else if (commandWord.equals("go")){
       if (currentRoom.hasMonsters())
-        System.out.println("The monster won't let you.");
+        System.out.println("Finish it(kill the monster).");
       else
         goRoom(command);
     }else if (commandWord.equals("quit")) {
@@ -210,6 +210,7 @@ public class Game {
     return false;
   
   }
+    }
   
 
 
